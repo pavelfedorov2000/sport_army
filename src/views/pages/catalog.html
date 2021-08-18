@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Каталог"
+})
+
+<body>
+
+    <div class="wrapper">
+        <!-- @@include('../../blocks/modules/header/_header.html')
+
+        @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html') -->
+
+        <main class="page catalog">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            Скамейки
+                        </li>
+                    </ol>
+                </nav>
+                <h1 class="page-title">
+                    Скамейки
+                </h1>
+
+                <div class="catalog__top-filters top-filters flex flex-jcsb flex-aic">
+                    <div class="top-filters__left">
+                        <div class="top-filters__buttons flex flex-wrap">
+                            @@include('../../blocks/modules/filters/_1.html')
+                            @@include('../../blocks/modules/filters/_2.html')
+                        </div>
+                    </div>
+                    <div class="top-filters__right">
+                        <form class="show-form flex flex-aic" action="#">
+                            <div class="show-form__descr">
+                                Показывать по:
+                            </div>
+                            <div class="show-form__radios flex">
+                                <label class="show-form__radio-item">
+                                    <input class="radio-box" type="radio" name="show" value="20" checked>
+                                    <span class="radio-style">20</span>
+
+                                </label>
+                                <label class="show-form__radio-item">
+                                    <input class="radio-box" type="radio" name="show" value="40">
+                                    <span class="radio-style">40</span>
+
+                                </label>
+                                <label class="show-form__radio-item">
+                                    <input class="radio-box" type="radio" name="show" value="80">
+                                    <span class="radio-style">80</span>
+
+                                </label>
+                                <label class="show-form__radio-item">
+                                    <input class="radio-box" type="radio" name="show" value="all">
+                                    <span class="radio-style">Все</span>
+
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="top-filters__checked flex flex-aic">
+                    <div class="top-filters__checked-items flex flex-wrap"></div>
+                    <button class="top-filters__reset-btn">
+                        Cбросить фильтр
+                    </button>
+                </div>
+
+                <div class="catalog__cards grid col-4">
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/1.jpg" alt="Тумба Верона Ресторан">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Тумба Верона "Ресторан"
+                            </h6>
+                            <div class="catalog-card__id">id: 13492</div>
+                            <div class="catalog-card__price">16 445 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/2.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Скамья Верона "Альфа"<br>
+                                без спинки
+                            </h6>
+                            <div class="catalog-card__id">id: 13351</div>
+                            <div class="catalog-card__price">15 670 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/3.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Сиденье "Владивосток"
+                            </h6>
+                            <div class="catalog-card__id">id: 13179</div>
+                            <div class="catalog-card__price">16 110 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/4.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Скамейка парковая "Радиус"
+                            </h6>
+                            <div class="catalog-card__id">id: 11480</div>
+                            <div class="catalog-card__price">13 170 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/2.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Скамья Верона "Альфа"<br>
+                                без спинки
+                            </h6>
+                            <div class="catalog-card__id">id: 13351</div>
+                            <div class="catalog-card__price">15 670 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/4.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Скамейка парковая "Радиус"
+                            </h6>
+                            <div class="catalog-card__id">id: 11480</div>
+                            <div class="catalog-card__price">13 170 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/1.jpg" alt="Тумба Верона Ресторан">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Тумба Верона "Ресторан"
+                            </h6>
+                            <div class="catalog-card__id">id: 13492</div>
+                            <div class="catalog-card__price">16 445 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/3.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Сиденье "Владивосток"
+                            </h6>
+                            <div class="catalog-card__id">id: 13179</div>
+                            <div class="catalog-card__price">16 110 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/3.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Сиденье "Владивосток"
+                            </h6>
+                            <div class="catalog-card__id">id: 13179</div>
+                            <div class="catalog-card__price">16 110 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/1.jpg" alt="Тумба Верона Ресторан">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Тумба Верона "Ресторан"
+                            </h6>
+                            <div class="catalog-card__id">id: 13492</div>
+                            <div class="catalog-card__price">16 445 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/4.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Скамейка парковая "Радиус"
+                            </h6>
+                            <div class="catalog-card__id">id: 11480</div>
+                            <div class="catalog-card__price">13 170 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/2.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Скамья Верона "Альфа"<br>
+                                без спинки
+                            </h6>
+                            <div class="catalog-card__id">id: 13351</div>
+                            <div class="catalog-card__price">15 670 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/4.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Скамейка парковая "Радиус"
+                            </h6>
+                            <div class="catalog-card__id">id: 11480</div>
+                            <div class="catalog-card__price">13 170 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/3.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Сиденье "Владивосток"
+                            </h6>
+                            <div class="catalog-card__id">id: 13179</div>
+                            <div class="catalog-card__price">16 110 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/2.jpg" alt="">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Скамья Верона "Альфа"<br>
+                                без спинки
+                            </h6>
+                            <div class="catalog-card__id">id: 13351</div>
+                            <div class="catalog-card__price">15 670 руб</div>
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-card">
+                        <div class="catalog-card__img">
+                            <img src="img/content/catalog/1.jpg" alt="Тумба Верона Ресторан">
+                        </div>
+                        <div class="catalog-card__content">
+                            <h6 class="catalog-card__title">
+                                Тумба Верона "Ресторан"
+                            </h6>
+                            <div class="catalog-card__id">id: 13492</div>
+                            <div class="catalog-card__price">16 445 руб</div>
+                        </div>
+                    </a>
+                </div>
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="prev"><a href="#">Prev</a></li>
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                        <li class="next"><a href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </main>
+
+        <!-- @@include('../../blocks/modules/footer/_footer.html')
+
+        @@include('../../blocks/modules/popups/_popups.html') -->
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

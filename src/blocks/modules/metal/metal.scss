@@ -1,0 +1,39 @@
+.metal {
+    padding: 105px 0 90px;
+
+    @media only screen and (min-width: 1921px) {
+        padding: 80px 0 120px;
+    }
+
+    @media(max-width: 1440px) {
+        padding: 123px 0 72px;
+    }
+
+    &__top {
+        max-width: 1156px;
+        margin-bottom: 40px;
+
+        @media only screen and (min-width: 1921px) {
+            max-width: 1500px;
+            margin-bottom: 100px;
+        }
+    }
+
+    &__top-text {
+        p {
+            margin-top: 20px;
+        }
+    }
+}
+
+.metal-card {
+    height: 240px;
+
+    @media only screen and (min-width: 1921px) {
+        height: 370px;
+    }
+
+    @media(max-width: 1440px) {
+        height: 200px;
+    }
+}

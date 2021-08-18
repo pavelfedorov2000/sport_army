@@ -1,0 +1,82 @@
+.feedback-form {
+
+
+    width: 660px;
+    padding: 50px 30px;
+
+    @media only screen and (min-width: 1921px) {
+        width: 810px;
+        padding: 80px 75px 50px;
+    }
+
+    @media(max-width: 1500px) {
+        width: 670px;
+        padding: 70px 40px;
+    }
+
+    @media(max-width: 1200px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    // .feedback-form__title
+
+    &__title {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 32px;
+
+        @media only screen and (min-width: 1921px) {
+            font-size: 34px;
+            line-height: 41px;
+            margin-bottom: 40px;
+        }
+    }
+
+    // .feedback-form__item
+
+    &__item+&__item {
+        margin-top: 20px;
+    }
+
+    // .feedback-form__input
+
+    &__input {}
+
+    // .feedback-form__item--textarea
+
+    &__item--textarea {}
+
+    // .feedback-form__textarea
+
+    &__textarea {}
+
+    // .feedback-form__agreement
+
+    &__agreement {
+        margin: 10px 0 40px;
+
+        .check-style {
+            width: 20px;
+            height: 20px;
+            border: 1px solid $textcolor;
+        }
+
+        .check-text {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            padding-left: 25px;
+        }
+
+        .check-box:checked+.check-style:before {
+            width: 16px;
+            height: 13px;
+            background-image: url(../img/icons/agree-check.svg);
+        }
+    }
+
+    // .feedback-form__btn
+
+    &__btn {}
+}

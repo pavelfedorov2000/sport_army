@@ -1,0 +1,284 @@
+.contacts {
+
+    // .contacts__row
+
+    &__row {
+        align-items: flex-start;
+        margin-bottom: 107px;
+
+        @media only screen and (min-width: 1921px) {
+            margin-bottom: 122px;
+        }
+
+        @media(max-width: 1500px) {
+            margin-bottom: 75px;
+        }
+
+        @media(max-width: 767px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    // .contacts__list
+
+    &__items {
+        align-items: flex-start;
+
+        @media(max-width: 767px) {
+            margin-bottom: 25px;
+        }
+
+        >* {
+            @media(max-width: 1440px) {
+                flex-direction: column;
+            }
+
+            @media(max-width: 576px) {
+                align-items: center;
+            }
+        }
+
+        @media(max-width: 576px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    // .contacts__item
+
+    &__item+&__item {
+        margin-left: 35px;
+
+        @media only screen and (min-width: 1921px) {
+            margin-left: 66px;
+        }
+
+        @media(max-width: 1500px) {
+            margin-left: 27px;
+        }
+
+        @media(max-width: 1440px) {
+            margin-left: 0;
+        }
+    }
+
+    &__addresses {
+        .contacts {
+            &__item {
+                &:first-child {
+                    max-width: 302px;
+
+                    @media only screen and (min-width: 1921px) {
+                        max-width: 397px;
+                    }
+
+                    @media(max-width: 1500px) {
+                        max-width: 237px;
+                    }
+                }
+
+                &:last-child {
+                    max-width: 361px;
+
+                    @media only screen and (min-width: 1921px) {
+                        max-width: 478px;
+                    }
+
+                    @media(max-width: 1500px) {
+                        max-width: 283px;
+                    }
+                }
+            }
+        }
+
+        >*+* {
+            @media(max-width: 1440px) {
+                @media(max-width: 1440px) {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    &__item {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+
+        @media only screen and (min-width: 1921px) {
+            font-size: 24px;
+            line-height: 22px;
+        }
+
+        @media(max-width: 1500px) {
+            font-size: 14px;
+        }
+
+        @media(max-width: 576px) {
+            text-align: center;
+        }
+
+        svg {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+
+            @media only screen and (min-width: 1921px) {
+                width: 30px;
+                height: 30px;
+            }
+
+            @media(max-width: 1500px) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__other {
+        margin-left: 35px;
+
+        @media only screen and (min-width: 1921px) {
+            margin-left: 66px;
+        }
+
+        @media(max-width: 1500px) {
+            margin-left: 27px;
+        }
+
+        @media(max-width: 1440px) {
+            margin-left: 34px;
+        }
+
+        @media(max-width: 767px) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+
+        >*+* {
+            @media(max-width: 1440px) {
+                margin-top: 28px;
+            }
+
+            @media(max-width: 576px) {
+                margin-top: 20px;
+            }
+        }
+
+        .contacts {
+            &__item {
+                &:last-child {
+                    svg {
+                        width: 20px;
+                        height: 20px;
+
+                        @media only screen and (min-width: 1921px) {
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                        @media(max-width: 1500px) {
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // .contacts__btn
+
+    &__btn {
+        padding: 15px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+
+        @media(max-width: 1440px) {
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+
+    &__info {
+        max-width: 1027px;
+        margin: 100px auto 0;
+        text-align: center;
+
+        @media only screen and (min-width: 1921px) {
+            max-width: 1390px;
+        }
+
+        @media(max-width: 1500px) {
+            max-width: 990px;
+        }
+
+        @media(max-width: 992px) {
+            margin-top: 80px;
+        }
+
+        @media(max-width: 576px) {
+            margin-top: 50px;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 39px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 34px;
+
+            @media only screen and (min-width: 1921px) {
+                font-size: 34px;
+                line-height: 41px;
+                margin-bottom: 24px;
+            }
+
+            @media(max-width: 1500px) {
+                font-size: 24px;
+                line-height: 29px;
+                margin-bottom: 30px;
+            }
+
+            @media(max-width: 992px) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            @media(max-width: 576px) {
+                max-width: 218px;
+                margin: 0 auto 20px;
+            }
+        }
+    }
+
+    &__info-text {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 300;
+
+        @media only screen and (min-width: 1921px) {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        @media(max-width: 1500px) {
+            font-size: 16px;
+        }
+
+        @media(max-width: 992px) {
+            font-size: 14px;
+            text-align: left;
+        }
+
+        b {
+            font-weight: 500;
+        }
+    }
+}

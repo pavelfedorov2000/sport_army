@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Карточка товара"
+})
+
+<body>
+
+    <div class="wrapper">
+        <!-- @@include('../../blocks/modules/header/_header.html')
+
+        @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html') -->
+
+        <main class="page">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">скамейки</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            Тумба Верона "Ресторан"
+                        </li>
+                    </ol>
+                </nav>
+                <h1 class="page-title">
+                    Тумба Верона "Ресторан"
+                </h1>
+
+                <div class="product-card">
+                    <div class="product-card__wrapper flex flex--jcsb">
+                        <div class="product-card__left">
+                            @@include('../../blocks/modules/product-card/_gallery.html')
+                            @@include('../../blocks/modules/product-card/_description.html')
+                        </div>
+                        <div class="product-card__right">
+                            <div class="product-card__product-name">
+                                Тумба Верона "Ресторан"
+                            </div>
+                            <div class="product-card__product-id">
+                                id: 11480
+                            </div>
+                            <div class="product-card__quantity flex flex-aic">
+                                <div class="product-card__quantity-title">
+                                    Количество:
+                                </div>
+                                <div class="counter product-card__quantity-counter flex flex-jcsb flex-aic">
+                                    <button class="count-btn minus-btn" type="button"></button>
+                                    <input class="counter-input" value="1" name="product_quantity">
+                                    <button class="count-btn plus-btn" type="button"></button>
+                                </div>
+                            </div>
+                            <div class="product-card__price-wrap flex flex-jcsb flex-aic">
+                                <div class="product-card__price flex">
+                                    <div class="product-card__price-title">
+                                        цена:
+                                    </div>
+                                    <div>
+                                        от <span>14 300 РУБ</span>
+                                    </div>
+                                </div>
+                                <button class="btn-black product-card__btn">
+                                    Сделать заказ
+                                </button>
+                            </div>
+                            <form action="#">
+                                <fieldset class="product-card__info-item product-characteristics">
+                                    <legend class="product-card__info-title">
+                                        Характеристики
+                                    </legend>
+                                    <div class="product-characteristics__wrap flex flex-wrap flex-jcsb">
+                                        @@include('../../blocks/modules/product-card/_characteristics.html')
+                                        @@include('../../blocks/modules/product-card/_color.html')
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- @@include('../../blocks/modules/footer/_footer.html') -->
+
+        @@include('../../blocks/modules/popups/colors/_colors.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

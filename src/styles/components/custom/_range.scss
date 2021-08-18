@@ -1,0 +1,80 @@
+// ======================= RANGE SLIDER =========================== //
+.irs {
+    &--flat {
+        width: 100%;
+        height: 78px;
+
+        .irs {
+            &-min,
+            &-max {
+                width: 110px;
+                height: 41px;
+                top: 0px;
+                padding: 14px 21px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 20px;
+                color: #383838;
+                text-shadow: none;
+                background-color: transparent;
+                border-radius: 0;
+                visibility: visible !important;
+                border-radius: 21px;
+                border: 1px solid #cccccc;
+                cursor: pointer;
+                transition: 0.3s all;
+                text-align: center;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            &-line {
+                top: 65px;
+                height: 3px;
+                background-color: transparent;
+                border-radius: 0;
+            }
+
+            &-bar {
+                top: 65px;
+                width: 258px;
+                height: 3px;
+                background-color: #cccccc;
+            }
+
+            &-handle {
+                top: 55px;
+                width: 23px;
+                height: 23px;
+                background: transparent;
+                border: 1px solid #cdcdcd;
+                border-radius: 50%;
+
+                i:first-child {
+                    @extend %pos-center-xy;
+                    width: 21px;
+                    height: 21px;
+                    margin-left: 0;
+                }
+
+                &:hover {
+                    i:first-child {
+                        background-color: transparent;
+                    }
+                }
+
+                &.state_hover > i:first-child {
+                    background-color: transparent;
+                }
+            }
+
+            &-from,
+            &-to,
+            &-single {
+                display: none;
+            }
+        }
+    }
+}

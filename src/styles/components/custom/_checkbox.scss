@@ -1,0 +1,50 @@
+// ===================== CHECKBOXES ==================== //
+.check-box {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.check-style {
+    position: absolute;
+}
+
+.check-text {
+    cursor: pointer;
+}
+
+.check-box:checked+.check-style:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// ===================== RADIO ===================== //
+.radio-box {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.radio-style {
+    position: relative;
+    cursor: pointer;
+    //position: absolute;
+    //width: 16px;
+    //height: 16px;
+    //border: 2px solid ;
+}
+
+.radio-box:checked+.radio-style:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

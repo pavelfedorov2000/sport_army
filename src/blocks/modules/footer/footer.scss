@@ -1,0 +1,116 @@
+.footer {
+    margin-top: 50px;
+    padding-top: 75px;
+    background: #19202A;
+    color: #fff;
+    font-size: 18px;
+
+    a {
+        color: #969696;
+        text-decoration: none;
+
+        &:hover,
+        &.active {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    &__logo {
+        margin-left: 30px;
+        margin-bottom: 30px;
+        max-width: 226px;
+    }
+
+    &__contacts {
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+            line-height: 1.2;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    &__phone {
+        padding: 1px 0 1px 34px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none'%3E%3Cpath d='M27.4998 21.15V24.9C27.5012 25.2481 27.4299 25.5927 27.2904 25.9117C27.151 26.2307 26.9464 26.517 26.6899 26.7523C26.4334 26.9877 26.1305 27.1669 25.8007 27.2784C25.4709 27.3899 25.1215 27.4313 24.7748 27.4C20.9283 26.982 17.2335 25.6677 13.9873 23.5625C10.9671 21.6433 8.40646 19.0827 6.48729 16.0625C4.37477 12.8015 3.0601 9.08874 2.64979 5.225C2.61856 4.87933 2.65964 4.53095 2.77042 4.20203C2.8812 3.87311 3.05926 3.57086 3.29325 3.31453C3.52725 3.05819 3.81205 2.85339 4.12953 2.71315C4.44702 2.57292 4.79022 2.50033 5.13729 2.5H8.88729C9.49393 2.49403 10.082 2.70885 10.542 3.10441C11.002 3.49998 11.3024 4.04931 11.3873 4.65C11.5456 5.85008 11.8391 7.02841 12.2623 8.1625C12.4305 8.6099 12.4669 9.09614 12.3672 9.5636C12.2675 10.0311 12.0359 10.4601 11.6998 10.8L10.1123 12.3875C11.8917 15.5169 14.4829 18.1081 17.6123 19.8875L19.1998 18.3C19.5397 17.9639 19.9687 17.7323 20.4362 17.6326C20.9037 17.5329 21.3899 17.5693 21.8373 17.7375C22.9714 18.1607 24.1497 18.4542 25.3498 18.6125C25.957 18.6982 26.5115 19.004 26.908 19.4719C27.3044 19.9397 27.515 20.537 27.4998 21.15Z' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-size: 24px;
+    }
+
+    &__email {
+        padding: 1px 0 1px 34px;
+        background: url(../images/dist/icon/mail.svg) no-repeat left
+    }
+
+    .adres {
+        padding-left: 34px;
+        background: url(../images/dist/icon/map-pin.svg) no-repeat 0 5px
+    }
+
+    .time {
+        margin-top: 25px;
+        padding-left: 34px;
+        background: url(../images/dist/icon/bx_bx-time-five.svg) no-repeat 0 5px;
+
+        b {
+            font-size: 18px;
+            letter-spacing: 0.05em;
+            display: block;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.1;
+        letter-spacing: 0.05em;
+        margin-bottom: 20px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 66%;
+            height: 4px;
+            background: #fff;
+            margin-top: 18px;
+        }
+    }
+
+    &__list {
+        li {
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__bottom {
+        margin-top: 50px;
+        background: #0F0F0F;
+        padding: 27px 0;
+    }
+
+    &__copir {
+        line-height: 1.1;
+        font-weight: 500;
+        color: #969696;
+
+        span {
+            font-weight: 700;
+            display: block;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__soc {
+        grid-column: 3 / 4;
+    }
+}

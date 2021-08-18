@@ -1,0 +1,36 @@
+<div style="display: none;" class="popup feedback-form" id="feedback">
+    <div class="form-title feedback-form__title">
+        Обратная связь
+    </div>
+    <form id="feedback-form" action="#">
+        <div class="feedback-form__item">
+            <label for="feedback-form_name" class="label">ФИО*</label>
+            <input class="input feedback-form__input" name="name" id="feedback-form_name">
+        </div>
+        <div class="feedback-form__item">
+            <label for="feedback-form_phone" class="label">Телефон*</label>
+            <input class="input feedback-form__input" type="tel" name="phone" id="feedback-form_phone"
+                placeholder="+ _ (____) ___-__-__">
+        </div>
+        <div class="feedback-form__item">
+            <label for="feedback-form_email" class="label">E-mail*</label>
+            <input class="input feedback-form__input" type="email" name="email" id="feedback-form_email"
+                placeholder="E-mail*">
+        </div>
+        <div class="feedback-form__item feedback-form__item--textarea">
+            <label for="message" class="label">Сообщение</label>
+            <textarea name="feedback_message" id="feedback_message" class="input textarea feedback-form__textarea"
+                placeholder="Сообщение"></textarea>
+        </div>
+        <label class="feedback-form__agreement flex flex-aic">
+            <input class="check-box" type="checkbox" checked>
+            <span class="check-style"></span>
+            <small class="check-text">
+                Я согласен(а) на обработку персональных данных
+            </small>
+        </label>
+        <button class="btn-black form-btn feedback-form__btn" type="submit">
+            Отправить
+        </button>
+    </form>
+</div>

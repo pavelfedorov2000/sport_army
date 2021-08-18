@@ -1,0 +1,28 @@
+<div class="form basket-form">
+    <h2 class="form-title basket-form__title">
+        Оформление заказа
+    </h2>
+    <form action="#">
+        <div class="basket-form__item">
+            <label for="basket-form_name" class="label">ФИО*</label>
+            <input class="input basket-form__input" name="name" id="basket-form_name">
+        </div>
+        <div class="basket-form__item">
+            <label for="basket-form_phone" class="label">Телефон*</label>
+            <input class="input basket-form__input" type="tel" name="phone" id="basket-form_phone"
+                placeholder="+ _ (____) ___-__-__">
+        </div>
+        <div class="basket-form__item">
+            <label for="basket-form_email" class="label">E-mail*</label>
+            <input class="input basket-form__input" type="email" name="email" id="basket-form_email"
+                placeholder="E-mail*">
+        </div>
+        <div class="basket-form__item basket-form__item--textarea">
+            <label for="message" class="label">Сообщение</label>
+            <small>Дополнительная информация к заказу</small>
+            <textarea name="message" id="message" class="input textarea basket-form__input basket-form__textarea"
+                placeholder="Сообщение"></textarea>
+        </div>
+        <button class="btn-black form-btn basket-form__btn" type="submit">Заказать</button>
+    </form>
+</div>

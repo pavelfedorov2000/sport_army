@@ -1,0 +1,74 @@
+// colors
+$textcolor: #19202A;
+//$accent: ;
+//$dark: ;
+//$red: ;
+//$blue: ;
+//$dark-blue: ;
+//$yellow: ;
+//$orange: ;
+//$light: ;
+//$border-color: ;
+//$border: 1px solid $border-color;
+
+// fonts
+//$second-font: , sans-serif;
+
+%vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+%flex-center {
+    @extend %vertical-align;
+    justify-content: center;
+}
+
+%flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+%flex-row-center {
+    @extend %flex-row;
+    align-items: center;
+}
+
+%flex-row-end {
+    @extend %flex-row;
+    align-items: flex-end;
+}
+
+%flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+%flex-col-center {
+    @extend %flex-col;
+    align-items: center;
+}
+
+%flex-col-end {
+    @extend %flex-col;
+    align-items: flex-end;
+}
+
+%pos-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+%pos-center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%pos-center-xy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

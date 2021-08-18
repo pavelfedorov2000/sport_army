@@ -1,0 +1,133 @@
+.pagination {
+    margin: 100px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width: 1500px) {
+        margin-top: 80px
+    }
+
+    @media(max-width: 767px) {
+        margin-top: 30px;
+    }
+}
+
+.pagination li {
+    padding: 0 15px;
+
+    @media(max-width: 1500px) {
+        padding: 0 13px;
+    }
+
+    @media(max-width: 767px) {
+        display: none;
+    }
+
+    @media(max-width: 576px) {
+        padding: 0 10px
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6),
+    &:last-child {
+        @media(max-width: 767px) {
+            display: block;
+        }
+    }
+}
+
+.pagination a {
+    text-decoration: none;
+    font-size: 26px;
+    letter-spacing: .05em;
+    line-height: 1;
+    display: block;
+
+    @media(max-width: 1500px) {
+        font-size: 24px
+    }
+
+    @media(max-width: 576px) {
+        font-size: 16px
+    }
+}
+
+.pagination a:hover {
+    text-decoration: none;
+    color: #969696;
+}
+
+.pagination .active {
+    padding: 0;
+}
+
+.pagination .active a {
+    color: #969696;
+    font-size: 40px;
+    font-weight: 300;
+    padding: 0 10px;
+    border-bottom: 3px solid #19202a;
+
+    @media(max-width: 1500px) {
+        font-size: 36px
+    }
+
+    @media(max-width: 576px) {
+        font-size: 26px;
+        padding: 0 5px;
+        border-bottom-width: 1px;
+    }
+}
+
+.pagination .next a,
+.pagination .prev a {
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    background: url(../img/icons/pagination.svg) no-repeat center;
+    background-size: auto 70%;
+
+    @media(max-width: 1500px) {
+        width: 24px;
+        height: 24px;
+        background-size: auto 80%
+    }
+}
+
+.pagination .next a:hover,
+.pagination .prev a:hover {
+    opacity: .8;
+}
+
+.pagination .next {
+    margin-left: -15px;
+
+    @media(max-width: 1500px) {
+        margin-left: -13px
+    }
+
+    @media(max-width: 576px) {
+        margin-left: 0;
+    }
+}
+
+.pagination .prev {
+    display: none;
+    margin-right: -15px;
+
+    @media(max-width: 1500px) {
+        margin-right: -13px
+    }
+
+    @media(max-width: 576px) {
+        margin-right: 0;
+    }
+}
+
+.pagination .prev a {
+    transform: rotate(-180deg);
+}

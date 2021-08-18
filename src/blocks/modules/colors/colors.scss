@@ -1,0 +1,27 @@
+.colors {
+    padding-top: 70px;
+
+    @media only screen and (min-width: 1921px) {
+        padding-top: 160px;
+    }
+
+    &__top {
+        margin-bottom: 75px;
+
+        @media only screen and (min-width: 1921px) {
+            margin-bottom: 100px;
+        }
+    }
+}
+
+.color-card {
+    height: 420px;
+
+    @media only screen and (min-width: 1921px) {
+        height: 640px;
+    }
+
+    @media(max-width: 1440px) {
+        height: 273px;
+    }
+}

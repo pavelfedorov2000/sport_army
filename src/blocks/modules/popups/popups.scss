@@ -1,0 +1,48 @@
+/* .popup {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+
+    &__title {}
+
+    &__subtitle {}
+
+    &__form {}
+
+    &__form-input {}
+
+    &__form-btn {}
+} */
+
+.fancybox-close-small {
+    background: #fff;
+    opacity: 1;
+
+    &:before {
+        content: '';
+        position: absolute;
+        @extend %pos-center-xy;
+        width: 40px;
+        height: 40px;
+        background-image: url(../img/icons/popup-close.svg);
+    }
+}
+
+.fancybox-slide--html .fancybox-close-small {
+    top: 20px;
+    right: 20px;
+    padding: 0;
+
+    @media only screen and (min-width: 1921px) {
+        top: 50px;
+        right: 70px;
+    }
+
+    @media(max-width: 1500px) {
+        top: 30px;
+        right: 37px;
+    }
+}
+
+@import './feedback/feedback';
+@import './colors/colors';

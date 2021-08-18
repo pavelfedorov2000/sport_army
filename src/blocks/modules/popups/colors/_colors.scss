@@ -1,0 +1,45 @@
+.colors-popup {
+
+    width: 1290px;
+    padding: 80px 30px 30px 30px;
+
+    // .colors-popup__items
+
+    &__items {
+        grid-gap: 10px;
+    }
+
+    // .colors-popup__item
+
+    &__item {
+        height: 160px;
+        @extend %flex-center;
+        text-align: center;
+    }
+}
+
+.color-item {
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 41px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    transition: .4s transform;
+
+    @media (any-hover: hover) {
+        &:hover {
+            transform: scale(1.015);
+        }
+    }
+
+    &--text {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: $textcolor;
+        text-transform: none;
+    }
+}

@@ -1,0 +1,30 @@
+.breadcrumb {
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #969696;
+    text-transform: uppercase;
+}
+
+.breadcrumb li {
+    padding-bottom: 5px;
+}
+
+.breadcrumb li::after {
+    content: '/';
+    padding: 0 1px;
+    color: #19202a;
+}
+
+.breadcrumb li:last-child::after {
+    display: none;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #19202a;
+    text-decoration: underline;
+}

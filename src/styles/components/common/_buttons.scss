@@ -1,0 +1,14 @@
+.btn-black {
+    display: block;
+    text-align: center;
+    background-color: $textcolor;
+    color: #fff;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        opacity: 0.9;
+        text-decoration: none;
+        color: #fff;
+    }
+}
