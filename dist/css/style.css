@@ -3645,7 +3645,14 @@ p:last-child {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-align: center;
-  padding-bottom: 25px;
+}
+
+.basket-table__col:first-child {
+  width: 563px;
+}
+
+.basket-table__col:nth-child(2) {
+  width: 125px;
 }
 
 .basket-table__col:nth-child(3) {
@@ -3666,35 +3673,14 @@ p:last-child {
 
 .basket-table__row:first-child {
   padding-top: 0;
-}
-
-.basket-table__row:first-child .basket-table__product {
-  position: relative;
-}
-
-.basket-table__row:first-child .basket-table__product:before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: 0;
-  width: calc(100vw - 105px * 2);
-  height: 1px;
-  background-color: #969696;
-}
-
-.basket-table__row:first-child .basket-table__delete-btn {
-  padding-top: 50px;
-}
-
-.basket-table__product {
-  width: 565px;
+  padding-bottom: 5px;
 }
 
 .basket-table__product-img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 210px;
-          flex: 0 0 210px;
+  width: 210px;
   height: 200px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .basket-table__product-img img {
@@ -5051,7 +5037,14 @@ p:last-child {
   .basket-table__col-title {
     font-size: 24px;
     line-height: 29px;
-    margin-bottom: 10px;
+  }
+
+  .basket-table__col:first-child {
+    width: 780px;
+  }
+
+  .basket-table__col:nth-child(2) {
+    width: 162px;
   }
 
   .basket-table__col:nth-child(3) {
@@ -5062,22 +5055,12 @@ p:last-child {
     width: 247px;
   }
 
-  .basket-table__row:first-child .basket-table__product:before {
-    width: calc(100vw - 80px * 2);
-  }
-
-  .basket-table__row:first-child .basket-table__delete-btn {
-    padding-top: 75px;
-  }
-
-  .basket-table__product {
-    width: 780px;
+  .basket-table__row:first-child {
+    padding-bottom: 10px;
   }
 
   .basket-table__product-img {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 315px;
-            flex: 0 0 315px;
+    width: 315px;
     height: 300px;
   }
 
@@ -5563,26 +5546,14 @@ p:last-child {
   .basket-table__col-title {
     font-size: 16px;
     line-height: 20px;
-    padding-bottom: 30px;
   }
 
   .basket-table__row {
     padding-right: 0;
   }
 
-  .basket-table__row:first-child .basket-table__product:before {
-    width: calc(100vw - 60px * 2);
-    top: -30px;
-  }
-
-  .basket-table__row:first-child .basket-table__delete-btn {
-    padding-top: 65px;
-  }
-
   .basket-table__product-img {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 203px;
-            flex: 0 0 203px;
+    width: 203px;
     height: 190px;
   }
 
@@ -6305,31 +6276,30 @@ p:last-child {
     display: inline-flex;
   }
 
-  .basket-table__col-title {
-    display: none;
+  .basket-table__col:first-child {
+    width: 100%;
+  }
+
+  .basket-table__col:last-child {
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+
+  .basket-table__row {
+    position: relative;
   }
 
   .basket-table__row:first-child {
-    padding-top: 20px;
-    border-top: 1px solid #969696;
-  }
-
-  .basket-table__row:first-child .basket-table__product:before {
     display: none;
   }
 
-  .basket-table__row:first-child .basket-table__delete-btn {
-    padding-top: 0;
-  }
-
-  .basket-table__product {
-    width: auto;
+  .basket-table__row:nth-child(2) {
+    border-top: 1px solid #969696;
   }
 
   .basket-table__product-img {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 187px;
-            flex: 0 0 187px;
+    width: 187px;
     height: 180px;
   }
 
@@ -6365,6 +6335,10 @@ p:last-child {
   .basket-table__sum span {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .basket-table__quantity {
+    margin-left: 0;
   }
 
   .basket-table__delete-btn {
@@ -7778,14 +7752,7 @@ p:last-child {
     line-height: 12px;
   }
 
-  .basket-table__row {
-    position: relative;
-  }
-
   .basket-table__product-img {
-    -webkit-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
     width: 111px;
     height: 110px;
   }
@@ -7815,12 +7782,6 @@ p:last-child {
   .basket-table__sum span {
     font-size: 12px;
     line-height: 15px;
-  }
-
-  .basket-table__delete-btn {
-    position: absolute;
-    top: 20px;
-    right: 0;
   }
 
   .basket-table__delete-btn svg {

@@ -224,26 +224,50 @@
         letter-spacing: 0.15em;
         text-transform: uppercase;
         text-align: center;
-        padding-bottom: 25px;
+        //padding-bottom: 25px;
 
         @media only screen and (min-width: 1921px) {
             font-size: 24px;
             line-height: 29px;
-            margin-bottom: 10px;
+            //margin-bottom: 10px;
         }
 
         @media(max-width: 1500px) {
             font-size: 16px;
             line-height: 20px;
-            padding-bottom: 30px;
-        }
-
-        @media(max-width: 1200px) {
-            display: none;
+            //padding-bottom: 30px;
         }
     }
 
     &__col {
+        &:first-child {
+            width: 563px;
+
+            @media only screen and (min-width: 1921px) {
+                width: 780px;
+            }
+
+            @media(max-width: 1200px) {
+                width: 100%;
+            }
+        }
+
+        &:last-child {
+            @media(max-width: 1200px) {
+                position: absolute;
+                top: 20px;
+                right: 0;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 125px;
+
+            @media only screen and (min-width: 1921px) {
+                width: 162px;
+            }
+        }
+
         &:nth-child(3) {
             width: 142px;
 
@@ -270,102 +294,53 @@
             padding-right: 0;
         }
 
-        @media(max-width: 767px) {
+        @media(max-width: 1200px) {
             position: relative;
         }
 
         &:first-child {
             padding-top: 0;
+            padding-bottom: 5px;
+
+            @media only screen and (min-width: 1921px) {
+                padding-bottom: 10px;
+            }
 
             @media(max-width: 1200px) {
-                padding-top: 20px;
+                display: none;
+            }
+        }
+
+        &:nth-child(2) {
+            @media(max-width: 1200px) {
                 border-top: 1px solid #969696;
             }
-
-            .basket-table {
-                &__product {
-                    position: relative;
-
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        top: -20px;
-                        left: 0;
-                        width: calc(100vw - 105px * 2);
-                        height: 1px;
-                        background-color: #969696;
-
-                        @media only screen and (min-width: 1921px) {
-                            width: calc(100vw - 80px * 2);
-                        }
-
-                        @media(max-width: 1500px) {
-                            width: calc(100vw - 60px * 2);
-                            top: -30px;
-                        }
-
-                        @media(max-width: 1200px) {
-                            display: none;
-                        }
-                    }
-                }
-
-                &__delete-btn {
-                    padding-top: 50px;
-
-                    @media only screen and (min-width: 1921px) {
-                        padding-top: 75px;
-                    }
-
-                    @media(max-width: 1500px) {
-                        padding-top: 65px;
-                    }
-
-                    @media(max-width: 1200px) {
-                        padding-top: 0;
-                    }
-                }
-            }
-        }
-    }
-
-    // .basket-table__product
-
-    &__product {
-        width: 565px;
-
-        @media only screen and (min-width: 1921px) {
-            width: 780px;
-        }
-
-        @media(max-width: 1200px) {
-            width: auto;
         }
     }
 
     // .basket-table__product-img
 
     &__product-img {
-        flex: 0 0 210px;
+        width: 210px;
         height: 200px;
+        flex-shrink: 0;
 
         @media only screen and (min-width: 1921px) {
-            flex: 0 0 315px;
+            width: 315px;
             height: 300px;
         }
 
         @media(max-width: 1500px) {
-            flex: 0 0 203px;
+            width: 203px;
             height: 190px;
         }
 
         @media(max-width: 1200px) {
-            flex: 0 0 187px;
+            width: 187px;
             height: 180px;
         }
 
         @media(max-width: 767px) {
-            flex: none;
             width: 111px;
             height: 110px;
         }
@@ -513,6 +488,10 @@
         @media(max-width: 1500px) {
             margin-top: 10px;
         }
+
+        @media(max-width: 1200px) {
+            margin-left: 0;
+        }
     }
 
     // .basket-table__delete-btn
@@ -527,12 +506,6 @@
 
         @media(max-width: 1200px) {
             padding-top: 0;
-        }
-
-        @media(max-width: 767px) {
-            position: absolute;
-            top: 20px;
-            right: 0;
         }
 
         svg {
@@ -571,9 +544,11 @@
 
         @media(max-width: 1200px) {
             text-align: left;
+            //white-space: nowrap;
         }
 
         @media(max-width: 767px) {
+            //white-space: normal;
             margin-left: auto;
 
             span {
