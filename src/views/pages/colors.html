@@ -7,11 +7,9 @@
 <body>
 
     <div class="wrapper">
-        <!-- @@include('../../blocks/modules/header/_header.html') -->
+        @@include('../../blocks/modules/header/_header.html')
 
-        <!-- @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html') -->
-
-        <main class="page page-text">
+        <main class="page page-text colors-p">
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -35,15 +33,6 @@
                         <div class="page-text-row__text col__8 drop-content-wrapper">
                             <h2>Пропитка</h2>
                             <div class="drop-content">
-                                <!-- <p>Производственная Компания Армия спорта Design & Innovation основана в 2007 году. <br>В
-                                начале нашего пути основным направлением деятельности была поставка спортивного
-                                оборудования для тренажерных залов и поставка (монтаж) уличного спортивного оборудования
-                                (уличные тренажеры, Workout, турники, брусья и т.д.), отсюда и название "Армия спорта".
-                                <span class="drop-span"><br>В 2011 году мы стали эксклюзивными дистрибьюторами
-                                    гидроранцев Jetlev-Flyer производства Германия, а в дальнейшем подводных гидроциклов
-                                    SeaBreacher производства США Калифорния. <br>С 2014 года мы начали развитие
-                                    собственного производства МАФов для комплексного благоустройства города (скамейки
-                                    уличные парковые, урны, вазоны и различные защитные сооружения).</span></p> -->
                                 <p>
                                     Водно-дисперсионная акриловая грунт-пропитка является водорастворимой, а поэтому и
                                     самой
@@ -76,7 +65,7 @@
                             <h2>масло</h2>
                             <p>
                                 Защитное масло для наружных работ – это продукт 3 в 1:
-                                <ul class="common-list">
+                                <ul class="common-list page-text-row__list">
                                     <li>грунтовка;</li>
                                     <li>атмосферостойкое масло;</li>
                                     <li>УФ-защита.</li>
@@ -122,53 +111,44 @@
                         "title": "Орех"
                         })
                     </div>
-                </section>
-                <section class="section metal">
-                    <div class="section__top metal__top">
-                        <h3 class="section__title">цвета</h3>
-                        <div class="section__text metal__top-text">
-                            Цвета RAL и текстура покрытия для металла. Для защиты металла от внешних воздействий мы
-                            проводим предварительную дробеструйная обработку металла, а также покрываем его порошковой
-                            краской с повышенным сроком эксплуатации. Для покраски металлических частей изделия мы
-                            используем 3 основных цвета:
-                            <ul class="common-list">
-                                <li>ral 7016 (Антрацитово-серый)</li><br>
-                                <li>ral 7024 (Графитовый серый)</li><br>
-                                <li>ral 9005 (Черный янтарь)</li>
-                            </ul>
-                            <p>
-                                Возможно окрашивание изделий в другие цвета по каталогу<br>
-                                RAL Classic без дополнительной оплаты.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="metal__cards grid col-3">
-                        <div class="card metal-card" style="background-image: url(img/metal/1.svg);">
-                            <div class="card-title">
-                                Антрацитово-серый<br>
-                                (ral 7016)
+                    <div class="tablet-visible">
+                        <div class="swiper-container colors-slider gallery">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    @@include('../../blocks/modules/colors/_color-card.html', {
+                                    "num": "1",
+                                    "title": "махагон"
+                                    })
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include('../../blocks/modules/colors/_color-card.html', {
+                                    "num": "2",
+                                    "title": "светлый дуб"
+                                    })
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include('../../blocks/modules/colors/_color-card.html', {
+                                    "num": "3",
+                                    "title": "палисандр"
+                                    })
+                                </div>
+                                <div class="swiper-slide">
+                                    @@include('../../blocks/modules/colors/_color-card.html', {
+                                    "num": "4",
+                                    "title": "Орех"
+                                    })
+                                </div>
                             </div>
-                        </div>
-                        <div class="card metal-card" style="background-image: url(img/metal/2.svg);">
-                            <div class="card-title">
-                                Графитовый серый<br>
-                                (RAL 7024)
-                            </div>
-                        </div>
-                        <div class="card metal-card" style="background-image: url(img/metal/3.svg);">
-                            <div class="card-title">
-                                Черный янтарь
-                                (ral 9005)
-                            </div>
+                            <div class="gallery-prev"></div>
+                            <div class="gallery-next"></div>
                         </div>
                     </div>
                 </section>
+                @@include('../../blocks/modules/metal/_metal.html')
             </div>
         </main>
 
-        <!-- @@include('../../blocks/modules/footer/_footer.html') -->
-
-        <!-- @@include('../../blocks/modules/popups/_popups.html') -->
+        @@include('../../blocks/modules/footer/_footer.html')
     </div>
 
     @@include('../_js.html')

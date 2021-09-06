@@ -1,0 +1,91 @@
+.banner-slider {
+    margin-bottom: 20px;
+    padding-top: 115px;
+}
+
+.banner-slider .swiper-slide {
+    position: relative;
+    padding: 0 0 77px;
+}
+
+.banner-slider .swiper-slide-active {
+    opacity: 1;
+}
+
+.banner-slider__text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(25, 32, 42, 0.6);
+    box-shadow: 0px 0px 16.6379px rgba(0, 0, 0, 0.05);
+    color: #fff;
+    font-size: 18px;
+    padding: 100px 90px 90px 135px;
+    z-index: 2;
+}
+
+.banner-slider__text::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: -50px;
+    right: -30px;
+    bottom: 57px;
+    left: -1px;
+}
+
+.banner-slider__title {
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.banner-slider__nav {
+    position: absolute;
+    z-index: 5;
+    left: 131px;
+    bottom: 43px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-slider__nav>* {
+    position: initial;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.banner-slider__nav .swiper-pagination {
+    padding: 0 5px;
+}
+
+.banner-slider__nav .swiper-pagination-current {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.banner-slider__nav .swiper-button-prev,
+.banner-slider__nav .swiper-button-next {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    flex-shrink: 0;
+}
+
+.banner-slider__nav .swiper-button-prev::after,
+.banner-slider__nav .swiper-button-next::after {
+    display: none;
+}
+
+.banner-slider__nav .swiper-button-prev {
+    background: url(../images/dist/icon/prev.svg) no-repeat center;
+}
+
+.banner-slider__nav .swiper-button-next {
+    background: url(../images/dist/icon/next.svg) no-repeat center;
+}

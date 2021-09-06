@@ -1,15 +1,43 @@
 .colors {
-    padding-top: 70px;
+    /* padding-top: 70px;
 
     @media only screen and (min-width: 1921px) {
         padding-top: 160px;
     }
+
+    @media(max-width: 992px) {
+        padding-top: 50px;
+    } */
 
     &__top {
         margin-bottom: 75px;
 
         @media only screen and (min-width: 1921px) {
             margin-bottom: 100px;
+        }
+
+        @media(max-width: 1500px) {
+            margin-bottom: 52px;
+        }
+
+        @media(max-width: 992px) {
+            margin-bottom: 42px;
+        }
+
+        @media(max-width: 576px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__cards {
+        grid-gap: 20px;
+
+        @media only screen and (min-width: 1921px) {
+            grid-gap: 30px;
+        }
+
+        @media(max-width: 992px) {
+            display: none;
         }
     }
 }
@@ -23,5 +51,40 @@
 
     @media(max-width: 1440px) {
         height: 273px;
+    }
+
+    @media(max-width: 576px) {
+        height: 160px;
+        padding-top: 27px;
+    }
+}
+
+.card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-title {
+    padding-top: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @media only screen and (min-width: 1921px) {
+        padding-top: 70px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @media(max-width: 1500px) {
+        padding-top: 40px;
+    }
+
+    @media(max-width: 576px) {
+        padding-top: 27px;
     }
 }

@@ -1,66 +1,126 @@
-<div style="display: none;" class="colors-popup" id="colors-popup">
-    <div class="colors-popup__items grid col-4">
-        <div class="colors-popup__item color-item" style="background-color: #B9A270;">
-            RAL 1001
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #CFC19C;">
-            RAL 1015
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #E4C627;">
-            RAL 1018
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #C64906;">
-            RAL 2004
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #9C2416;">
-            RAL 3000
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #AE1A0E;">
-            RAL 3020
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #02307D;">
-            RAL 5005
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #0455A6;">
-            RAL 5015
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #2E2552;">
-            RAL 5022
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #2D561C;">
-            RAL 6002
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #4C9415;">
-            RAL 6018
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #1D6E36;">
-            RAL 6032
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #3A3C37;">
-            RAL 7016
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #B5B7A9;">
-            RAL 7035
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #858782;">
-            RAL 7040
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #979890;">
-            RAL 9006
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #443122;">
-            RAL 8017
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #15100D;">
-            RAL 9005
-        </div>
-        <div class="colors-popup__item color-item" style="background-color: #D3D4C7;">
-            RAL 9003
-        </div>
-        <div class="colors-popup__item color-item color-item--text">
+<div class="popup colors-popup" id="colors-popup">
+    <button class="close-popup" type="button">
+        <img src="img/icons/close.svg" alt="крестик">
+    </button>
+    <form action="#" id="more-colors" class="colors-popup__items grid col-4">
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="1001" checked>
+            <span class="radio-style" style="background-color: #B9A270;">
+                RAL 1001
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="1015">
+            <span class="radio-style" style="background-color: #CFC19C;">
+                RAL 1015
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="1018">
+            <span class="radio-style" style="background-color: #E4C627;">
+                RAL 1018
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="2004">
+            <span class="radio-style" style="background-color: #C64906;">
+                RAL 2004
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="3000">
+            <span class="radio-style" style="background-color: #9C2416;">
+                RAL 3000
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="3020">
+            <span class="radio-style" style="background-color: #AE1A0E;">
+                RAL 3020
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="5005">
+            <span class="radio-style" style="background-color: #02307D;">
+                RAL 5005
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="5015">
+            <span class="radio-style" style="background-color: #0455A6;">
+                RAL 5015
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="5022">
+            <span class="radio-style" style="background-color: #2E2552;">
+                RAL 5022
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="6002">
+            <span class="radio-style" style="background-color: #2D561C;">
+                RAL 6002
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="6018">
+            <span class="radio-style" style="background-color: #4C9415;">
+                RAL 6018
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="6032">
+            <span class="radio-style" style="background-color: #1D6E36;">
+                RAL 6032
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="7016">
+            <span class="radio-style" style="background-color: #3A3C37;">
+                RAL 7016
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="7035">
+            <span class="radio-style" style="background-color: #B5B7A9;">
+                RAL 7035
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="7040">
+            <span class="radio-style" style="background-color: #858782;">
+                RAL 7040
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="9006">
+            <span class="radio-style" style="background-color: #979890;">
+                RAL 9006
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="8017">
+            <span class="radio-style" style="background-color: #443122;">
+                RAL 8017
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="9005">
+            <span class="radio-style" style="background-color: #15100D;">
+                RAL 9005
+            </span>
+        </label>
+        <label class="color-item">
+            <input class="radio-box" type="radio" name="popup_color" value="9003">
+            <span class="radio-style" style="background-color: #D3D4C7;">
+                RAL 9003
+            </span>
+        </label>
+        <small class="color-item">
             Возможность выбора
             других цветов
             из палитры RAL Classik
-        </div>
-    </div>
+        </small>
+    </form>
 </div>

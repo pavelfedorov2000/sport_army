@@ -7,9 +7,7 @@
 <body>
 
     <div class="wrapper">
-        <!-- @@include('../../blocks/modules/header/_header.html')
-
-        @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html') -->
+        @@include('../../blocks/modules/header/_header.html')
 
         <main class="page">
             <div class="container">
@@ -31,7 +29,7 @@
                 </h1>
 
                 <div class="product-card">
-                    <div class="product-card__wrapper flex flex--jcsb">
+                    <div class="product-card__wrapper flex flex-jcsb">
                         <div class="product-card__left">
                             @@include('../../blocks/modules/product-card/_gallery.html')
                             @@include('../../blocks/modules/product-card/_description.html')
@@ -58,34 +56,91 @@
                                     <div class="product-card__price-title">
                                         цена:
                                     </div>
-                                    <div>
-                                        от <span>14 300 РУБ</span>
-                                    </div>
+                                    <span>14 300 РУБ</span>
                                 </div>
-                                <button class="btn-black product-card__btn">
+                                <button class="btn-black product-card__btn" data-da=".product-card__right, 576, last">
                                     Сделать заказ
                                 </button>
                             </div>
-                            <form action="#">
-                                <fieldset class="product-card__info-item product-characteristics">
-                                    <legend class="product-card__info-title">
-                                        Характеристики
-                                    </legend>
-                                    <div class="product-characteristics__wrap flex flex-wrap flex-jcsb">
-                                        @@include('../../blocks/modules/product-card/_characteristics.html')
-                                        @@include('../../blocks/modules/product-card/_color.html')
+                            <section class="product-card__info-item product-characteristics">
+                                <h4 class="product-card__info-title">
+                                    Характеристики
+                                </h4>
+                                <div class="product-characteristics__wrap flex flex-wrap flex-jcsb">
+                                    @@include('../../blocks/modules/product-card/_characteristics.html')
+                                    @@include('../../blocks/modules/product-card/_color.html')
+                                </div>
+                            </section>
+                        </div>
+                        <div class="product-card__description tablet-visible">
+                            <h4 class="product-card__description-title">
+                                Описание
+                            </h4>
+                            <div class="product-card__description-text">
+                                <p>
+                                    Тумба может быть изготовлена с <b>регулируемыми по высоте ножками</b>, чтобы можно
+                                    было
+                                    выставить на неровной поверхности.
+                                </p>
+                                <br>
+                                <div class="product-card__description-listtitle">
+                                    Материалы:
+                                </div>
+                                <br>
+                                <dl class="product-card__info-list">
+                                    <div>
+                                        <dt>Опоры:</dt>
+                                        <dd>
+                                            Сталь с полимерно-порошковой покраской (возможность нанесения
+                                            антикоррозийного покрытия, условия уточняйте). Выбор цвета по каталогу RAL
+                                            Classic.
+                                        </dd>
                                     </div>
-                                </fieldset>
-                            </form>
+                                    <br>
+                                    <div>
+                                        <dt>Сиденье:</dt>
+                                        <dd>
+                                            Брус из хвойных пород древесины - сосна/ель (другие варианты исполнения:
+                                            лиственница, композитные материалы, ясень, термодревесина) различного
+                                            сечения.
+                                            Огнебиозащитные пропитки + тонировочный состав с антисептиком, стойкий к
+                                            атмосферным
+                                            осадкам, перепадам температур и образованию плесени. Возможность выбора
+                                            цвета из
+                                            палитры.
+                                        </dd>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <dt>Фурнитура:</dt>
+                                        <dd>
+                                            Оцинкованная. Стандартный цвет (по умолчанию) - серебристый.
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
                         </div>
                     </div>
+                </div>
+                @@include('../../blocks/modules/viewed-products/_viewed-products.html')
+                <div class="seo-text">
+                    <p>
+                        Скамейка парковая "Радиус" по доступной цене в Москве и других регионах России. Спешите купить у
+                        нас!
+                        Отправка, доставка товара " Скамейка парковая "Радиус" " во все регионы России. Скидки при
+                        комплексном
+                        заказе.
+                        Индивидуальный подход к каждому Заказчику
+                    </p>
                 </div>
             </div>
         </main>
 
-        <!-- @@include('../../blocks/modules/footer/_footer.html') -->
+        @@include('../../blocks/modules/footer/_footer.html')
 
-        @@include('../../blocks/modules/popups/colors/_colors.html')
+        <div class="overlay">
+            @@include('../../blocks/modules/popups/colors/_colors.html')
+        </div>
     </div>
 
     @@include('../_js.html')

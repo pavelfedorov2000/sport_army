@@ -50,6 +50,38 @@
         }
     }
 
+    &__total-right {
+        display: flex;
+        flex-direction: column;
+
+        @media(max-width: 1200px) {
+            flex-direction: row-reverse;
+        }
+
+        @media(max-width: 767px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .basket__link {
+            span {
+                @media(max-width: 1200px) {
+                    max-width: 160px;
+                    text-align: center;
+                }
+
+                @media(max-width: 767px) {
+                    max-width: none;
+                    white-space: nowrap;
+                }
+
+                @media(max-width: 374px) {
+                    white-space: normal;
+                }
+            }
+        }
+    }
+
     &__total-sum {
         font-weight: bold;
         font-size: 16px;
@@ -58,10 +90,12 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         text-align: right;
+        margin-bottom: 30px;
 
         @media only screen and (min-width: 1921px) {
             font-size: 18px;
             line-height: 22px;
+            margin-bottom: 40px;
         }
 
         @media(max-width: 1500px) {
@@ -72,9 +106,16 @@
         @media(max-width: 1200px) {
             font-size: 14px;
             line-height: 17px;
+            margin-bottom: 20px;
+        }
+
+        @media(max-width: 1200px) {
+            margin-bottom: 0;
+            margin-left: 20px;
         }
 
         @media(max-width: 767px) {
+            margin-left: 0;
             margin-bottom: 40px;
         }
 
@@ -91,34 +132,6 @@
             @media(max-width: 1200px) {
                 font-size: 24px;
                 line-height: 29px;
-            }
-        }
-    }
-
-    &__link+&__link {
-        margin-top: 40px;
-
-        @media only screen and (min-width: 1921px) {
-            margin-top: 58px;
-        }
-
-        @media(max-width: 1200px) {
-            margin-top: 0;
-            margin-left: 82px;
-        }
-
-        @media(max-width: 767px) {
-            margin-left: 0;
-        }
-
-        span {
-            @media(max-width: 1200px) {
-                max-width: 160px;
-                text-align: center;
-            }
-
-            @media(max-width: 767px) {
-                max-width: none;
             }
         }
     }
@@ -230,6 +243,24 @@
         }
     }
 
+    &__col {
+        &:nth-child(3) {
+            width: 142px;
+
+            @media only screen and (min-width: 1921px) {
+                width: 215px;
+            }
+        }
+
+        &:nth-child(4) {
+            width: 165px;
+
+            @media only screen and (min-width: 1921px) {
+                width: 247px;
+            }
+        }
+    }
+
     &__row {
         align-items: flex-start;
         padding: 20px 20px 20px 0;
@@ -301,7 +332,11 @@
     // .basket-table__product
 
     &__product {
-        width: 563px;
+        width: 565px;
+
+        @media only screen and (min-width: 1921px) {
+            width: 780px;
+        }
 
         @media(max-width: 1200px) {
             width: auto;
@@ -345,10 +380,10 @@
     // .basket-table__product-info
 
     &__product-info {
-        //margin-left: 30px;
+        margin-left: 30px;
 
         @media(max-width: 1500px) {
-            //margin-left: 20px;
+            margin-left: 20px;
             padding-top: 18px;
         }
 
@@ -468,6 +503,7 @@
         width: 111px;
         height: 37px;
         padding: 10px 20px;
+        margin: 0 auto;
 
         @media only screen and (min-width: 1921px) {
             width: 135px;
@@ -522,6 +558,8 @@
         }
 
         &.tablet-visible {
+            display: none;
+
             @media(max-width: 1200px) {
                 display: block;
             }
@@ -529,6 +567,12 @@
     }
 
     &__sum {
+        text-align: center;
+
+        @media(max-width: 1200px) {
+            text-align: left;
+        }
+
         @media(max-width: 767px) {
             margin-left: auto;
 
@@ -544,6 +588,8 @@
         }
 
         &.tablet-visible {
+            display: none;
+
             @media(max-width: 1200px) {
                 display: flex;
             }
@@ -554,6 +600,8 @@
         }
 
         &.mob-visible {
+            display: none;
+
             @media(max-width: 767px) {
                 display: flex;
             }
@@ -616,7 +664,7 @@
 .basket-form {
 
     width: 810px;
-    padding: 60px 105px;
+    padding: 50px 105px;
     background-color: #EFEFEF;
     margin: 0 auto;
 
@@ -695,11 +743,7 @@
     // .basket-form__item
 
     &__item+&__item {
-        margin-top: 30px;
-
-        @media(max-width: 1500px) {
-            margin-top: 20px;
-        }
+        margin-top: 20px;
     }
 
     &__item {
@@ -725,10 +769,6 @@
     }
 
     &__btn {
-        margin-top: 50px;
-
-        @media(max-width: 1500px) {
-            margin-top: 40px;
-        }
+        margin-top: 40px;
     }
 }

@@ -1,18 +1,114 @@
-$(function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-    $('.popup-link').fancybox();
+	let headerFix = document.querySelector('.header');
+	let btnSearch = document.querySelector('.btn-search');
+	let searchModal = document.querySelector('.search-modal');
+	let headerSearch = document.querySelector('.header__search');
+
+	window.onscroll = function () {
+		if (window.pageYOffset > 200) {
+			headerFix.classList.add('fixed');
+		}
+		if (window.pageYOffset > 50) {
+			btnSearch.classList.remove('active');
+			searchModal.classList.remove('active');
+			headerSearch.classList.remove('active-375');
+		}
+		else {
+			headerFix.classList.remove('fixed');
+		}
+	};
+
+	//Desktop catalog menu
+
+    $(".desc-catalog-btn").click(function (e) {
+        e.preventDefault();
+		$(this).toggleClass('active');
+		$('.desc-catalog-menu').toggleClass('active');
+		return false;
+	});
+
+    $(document).on('mouseup', function (e) {
+        let catMenu = $('.desc-catalog-menu');
+        let catBtn = $('.desc-catalog-btn');
+        if (!catMenu.is(e.target) && !catBtn.is(e.target) && catMenu.has(e.target).length === 0) {
+            catMenu.removeClass('active');
+            $(".desc-catalog-btn").removeClass('active');
+        }
+	});
+
+	$(".btn-search").click(function () {
+		$(this).toggleClass('active');
+		$('.search-modal').toggleClass('active');
+		$('.header__search').toggleClass('active-375');
+		return false;
+	});
+
+	$(".btn-caralog").click(function () {
+		$('.catalog-menu_mobil').addClass('active');
+		$('.header__search').addClass('catalog-active');
+		$('body').addClass('body-hidden');
+		return false;
+	});
+
+    $(".catalog-menu__close").click(function () {
+        $('.catalog-menu_mobil').removeClass('active');
+        $('.header__search').removeClass('catalog-active');
+        $('body').removeClass('body-hidden');
+        return false;
+    });
+
+	$(".btn-mobil-menu").click(function () {
+		$('.mobil-main-menu').addClass('active');
+		$('.header__search').addClass('menu-active');
+		$('.btn-caralog').addClass('body-hidden');
+		$('body').addClass('body-hidden');
+		return false;
+	});
+
+	$(".mobil-main-menu__close").click(function () {
+		$('.mobil-main-menu').removeClass('active');
+		$('.header__search').removeClass('menu-active');
+		$('.btn-caralog').removeClass('menu-active');
+		$('body').removeClass('body-hidden');
+		return false;
+	});
+
+	$(".mobil-main-menu__catalog").click(function () {
+		$('.mobil-main-menu').removeClass('active');
+		$('.header__search').removeClass('menu-active');
+		$('.btn-caralog').removeClass('menu-active');
+		$('.catalog-menu_mobil').addClass('active');
+		$('.header__search').addClass('catalog-active');
+		$('body').addClass('body-hidden');
+		return false;
+	});
+
+	$(".requisites-drop-link").click(function () {
+		$(this).toggleClass('active').siblings('.requisites__item .requisites__drop').toggleClass('active');
+		return false;
+	});
+
+	$(".drop-btn").click(function () {
+		$(this).toggleClass('active').siblings('.drop-content-wrapper .drop-content').toggleClass('active');
+		return false;
+	});
 
     if ($(window).width() < 992) {
         $('.top-filters__btn-inner').on('click', function () {
-            $(this).parent().siblings().removeClass('top-filters__btn--active');
-            $(this).parent().siblings().find('.drop-filters').slideUp('300');
-            $(this).parent().toggleClass('top-filters__btn--active');
-            $(this).next().slideToggle('300');
+            if (!$(this).parent().hasClass('top-filters__btn--disabled')) {
+                $(this).parent().siblings().removeClass('top-filters__btn--active');
+                $(this).parent().siblings().find('.drop-filters').slideUp('300');
+                $(this).parent().toggleClass('top-filters__btn--active');
+                $(this).next().slideToggle('300');
+            }
         });
     } else {
         $('.top-filters__btn-inner').on('click', function () {
-            $(this).parent().toggleClass('top-filters__btn--active');
-            $(this).next().slideToggle('300');
+            if (!$(this).parent().hasClass('top-filters__btn--disabled')) {
+                $(this).parent().toggleClass('top-filters__btn--active');
+                $(this).next().slideToggle('300');
+            }
         });
 
         $('.drop-filters__btn').on('click', function () {
@@ -21,17 +117,59 @@ $(function () {
         });
     }
 
-    $('#main-filters input[type="checkbox"]').on('change', function () {
-        console.log($(this).val());
-        var $value = $(this).val();
-        $('.top-filters__checked-items').append('<div class="top-filters__checked-item"></div>');
-        $('.top-filters__checked-item').prepend('span').text($(this).val());
-        $('.top-filters__checked-item').append('<button class="delete-filter"><img src="img/icons/filter-close.svg" alt="крестик"></button>');
+    $(document).on('mouseup', function (e) {
+        let filters = $('.top-filters__btn');
+        let filtersBtn = filters.find('.top-filters__btn-inner');
+        let filtersBtnArrow = filtersBtn.find('svg');
+        let filtersBody = $('.drop-filters');
+        if (!filtersBtn.is(e.target) && !filtersBtnArrow.is(e.target) && !filtersBody.is(e.target) && filtersBody.has(e.target).length === 0) {
+            filters.removeClass('top-filters__btn--active');
+            filtersBody.slideUp('300');
+        }
+	});
+
+    // Фильтры
+    $('.drop-filters input[type="checkbox"]').on('click', function () {
+        if ($(this).is(':checked')) {
+            let value = $(this).val();
+            console.log(value);
+            let newFilter = `
+                <div class="top-filters__checked-item">
+                    <span>${value}</span>
+                    <button class="delete-filter" type="button">
+                        <img src="img/icons/filter-close.svg" alt="крестик">
+                    </button>
+                </div>
+            `;
+            console.log(newFilter);
+            $('.top-filters__checked-items').append(newFilter);
+        }
+    });
+    /* $('.delete-filter').on('click', function () {
+        $(this).parent().remove();
+    }); */
+
+    $('.top-filters__reset-btn').on('click', function () {
+        $('.top-filters__checked-item').remove();
     });
 
-    $('.delete-filter').on('click', function () {
-        $(this).parent().hide();
-    });
+
+    // Выбор цвета
+    $('input[name="popup_color"]').on('change', function () {
+        //$.fancybox.close();
+        $('.overlay').fadeOut('slow');
+        $('#colors-popup').fadeOut('slow');
+        var checkedColorValue = $(this).val();
+        var checkedColorBg = $(this).next().css('background-color');
+        var newColorItem = `
+        <div class="product-color__item flex flex-aic">
+            <span class="radio-style" style="background-color: ${checkedColorBg}"></span>
+            <span class="radio-text">RAL ${checkedColorValue}</span>
+        </div>
+        `;
+        console.log(newColorItem);
+        $('.product-color__item:last-child').after(newColorItem);
+    }); 
 
     $('.minus-btn').on('click', function(e) {
         e.preventDefault();
@@ -41,13 +179,8 @@ $(function () {
 
         while(value > 0) {
             value -= 1;
-            //$('.count-btn').removeClass('count-btn--disabled');
             break;
         }
-    
-        /* if (value == 1) {
-            $('.minus-btn').addClass('count-btn--disabled');
-        } */
     
     $input.val(value);
     
@@ -61,417 +194,312 @@ $(function () {
 
         while(value < 10) {
             value += 1;
-            //$('.count-btn').removeClass('count-btn--disabled');
             break;
         }
-
-        /* if (value == 10) {
-            $('.plus-btn').addClass('count-btn--disabled');
-        } */
     
         $input.val(value);
     });
 
+    $('.basket-form').submit(function (e) {
+        e.preventDefault();
+        $('.basket__content').hide();
+        $('#order-success').fadeIn('slow');
+        $('html, body').animate({scrollTop: '0px'}, 300);
+    });
 
-    const productThumbsSlider = new Swiper(".gallery-nav", {
-        slidesPerView: 3,
-        spaceBetween: 5,
-        direction: "vertical",
-        freeMode: true,
-		watchSlidesProgress: true,
-        breakpoints: {
-            320: {
-                slidesPerView: "auto",
-                direction: "horizontal",
-                navigation: {
-                    nextEl: ".gallery-nav-next",
-                    prevEl: ".gallery-nav-prev",
-                },
-            },
-            768: {
-                direction: "horizontal",
-                slidesPerView: 3,
-                spaceBetween: 10,
-			},
-			1200: {
-                direction: "vertical",
-                slidesPerView: 3,
-                spaceBetween: 12,
-			},
+    $('.contacts__btn').on('click', function () {
+        $('body').addClass('_lock');
+        $('.overlay').fadeIn('slow');
+        $('#feedback').fadeIn('slow');
+    });
+
+    $('.product-color__link').on('click', function () {
+        $('.overlay').fadeIn('slow');
+        $('#colors-popup').fadeIn('slow');
+    });
+
+    $('.close-popup').on('click', function () {
+        $('body').removeClass('_lock');
+        $(this).parent().fadeOut('slow');
+        $('.overlay').fadeOut('slow');
+    });
+
+    $('#feedback-form').submit(function (e) {
+        e.preventDefault();
+        $(this).find('input').val('');
+        $(this).parent().hide();
+        $('#feedback-success').fadeIn('slow');
+    });
+
+    $('.feedback-success__close').on('click', function () {
+        $(this).parent().fadeOut('slow');
+    });
+
+    //Slider
+const swiperBannerSlider = new Swiper(".banner-slider", {
+	pagination: {
+		el: ".swiper-pagination",
+		type: "fraction",
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	//effect: "coverflow",
+	//coverflowEffect: {
+	//	rotate: 50,
+	//	stretch: 0,
+	//	depth: 100,
+	//	modifier: 1,
+	//	slideShadows: false,
+	//},
+	speed: 500,
+});
+
+const swiperProductCarusel = new Swiper(".product-carusel", {
+	pagination: {
+		el: ".product-pagination",
+		type: "fraction",
+	},
+	navigation: {
+		nextEl: ".product-button-next",
+		prevEl: ".product-button-prev",
+	},
+	slidesPerView: "auto",
+	spaceBetween: 20,
+	speed: 500,
+	breakpoints: {
+        320: {
+            slidesPerView: "1",
+			spaceBetween: 20,
+		},
+		768: {
+            slidesPerView: "auto",
+			spaceBetween: 10,
+		},
+		992: {
+            slidesPerView: "auto",
+			spaceBetween: 20,
+		},
+        1921: {
+            slidesPerView: "auto",
+			spaceBetween: 30,
 		}
-    });
-
-    const productSlider = new Swiper(".product-card__slider", {
-        //loop: true,
-        navigation: {
-            nextEl: ".gallery-next",
-            prevEl: ".gallery-prev",
-        },
-        thumbs: {
-            swiper: productThumbsSlider,
-        },
-    });
-
-    function DynamicAdapt(type) {
-    this.type = type;
-}
-
-DynamicAdapt.prototype.init = function () {
-    const _this = this;
-    // массив объектов
-    this.оbjects = [];
-    this.daClassname = "_dynamic_adapt_";
-    // массив DOM-элементов
-    this.nodes = document.querySelectorAll("[data-da]");
-
-    // наполнение оbjects объктами
-    for (let i = 0; i < this.nodes.length; i++) {
-        const node = this.nodes[i];
-        const data = node.dataset.da.trim();
-        const dataArray = data.split(",");
-        const оbject = {};
-        оbject.element = node;
-        оbject.parent = node.parentNode;
-        оbject.destination = document.querySelector(dataArray[0].trim());
-        оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : "767";
-        оbject.place = dataArray[2] ? dataArray[2].trim() : "last";
-        оbject.index = this.indexInParent(оbject.parent, оbject.element);
-        this.оbjects.push(оbject);
-    }
-
-    this.arraySort(this.оbjects);
-
-    // массив уникальных медиа-запросов
-    this.mediaQueries = Array.prototype.map.call(this.оbjects, function (item) {
-        return '(' + this.type + "-width: " + item.breakpoint + "px)," + item.breakpoint;
-    }, this);
-    this.mediaQueries = Array.prototype.filter.call(this.mediaQueries, function (item, index, self) {
-        return Array.prototype.indexOf.call(self, item) === index;
-    });
-
-    // навешивание слушателя на медиа-запрос
-    // и вызов обработчика при первом запуске
-    for (let i = 0; i < this.mediaQueries.length; i++) {
-        const media = this.mediaQueries[i];
-        const mediaSplit = String.prototype.split.call(media, ',');
-        const matchMedia = window.matchMedia(mediaSplit[0]);
-        const mediaBreakpoint = mediaSplit[1];
-
-        // массив объектов с подходящим брейкпоинтом
-        const оbjectsFilter = Array.prototype.filter.call(this.оbjects, function (item) {
-            return item.breakpoint === mediaBreakpoint;
-        });
-        matchMedia.addListener(function () {
-            _this.mediaHandler(matchMedia, оbjectsFilter);
-        });
-        this.mediaHandler(matchMedia, оbjectsFilter);
-    }
-};
-
-DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
-    if (matchMedia.matches) {
-        for (let i = 0; i < оbjects.length; i++) {
-            const оbject = оbjects[i];
-            оbject.index = this.indexInParent(оbject.parent, оbject.element);
-            this.moveTo(оbject.place, оbject.element, оbject.destination);
-        }
-    } else {
-        for (let i = 0; i < оbjects.length; i++) {
-            const оbject = оbjects[i];
-            if (оbject.element.classList.contains(this.daClassname)) {
-                this.moveBack(оbject.parent, оbject.element, оbject.index);
-            }
-        }
-    }
-};
-
-// Функция перемещения
-DynamicAdapt.prototype.moveTo = function (place, element, destination) {
-    element.classList.add(this.daClassname);
-    if (place === 'last' || place >= destination.children.length) {
-        destination.insertAdjacentElement('beforeend', element);
-        return;
-    }
-    if (place === 'first') {
-        destination.insertAdjacentElement('afterbegin', element);
-        return;
-    }
-    destination.children[place].insertAdjacentElement('beforebegin', element);
-}
-
-// Функция возврата
-DynamicAdapt.prototype.moveBack = function (parent, element, index) {
-    element.classList.remove(this.daClassname);
-    if (parent.children[index] !== undefined) {
-        parent.children[index].insertAdjacentElement('beforebegin', element);
-    } else {
-        parent.insertAdjacentElement('beforeend', element);
-    }
-}
-
-// Функция получения индекса внутри родителя
-DynamicAdapt.prototype.indexInParent = function (parent, element) {
-    const array = Array.prototype.slice.call(parent.children);
-    return Array.prototype.indexOf.call(array, element);
-};
-
-// Функция сортировки массива по breakpoint и place 
-// по возрастанию для this.type = min
-// по убыванию для this.type = max
-DynamicAdapt.prototype.arraySort = function (arr) {
-    if (this.type === "min") {
-        Array.prototype.sort.call(arr, function (a, b) {
-            if (a.breakpoint === b.breakpoint) {
-                if (a.place === b.place) {
-                    return 0;
-                }
-
-                if (a.place === "first" || b.place === "last") {
-                    return -1;
-                }
-
-                if (a.place === "last" || b.place === "first") {
-                    return 1;
-                }
-
-                return a.place - b.place;
-            }
-
-            return a.breakpoint - b.breakpoint;
-        });
-    } else {
-        Array.prototype.sort.call(arr, function (a, b) {
-            if (a.breakpoint === b.breakpoint) {
-                if (a.place === b.place) {
-                    return 0;
-                }
-
-                if (a.place === "first" || b.place === "last") {
-                    return 1;
-                }
-
-                if (a.place === "last" || b.place === "first") {
-                    return -1;
-                }
-
-                return b.place - a.place;
-            }
-
-            return b.breakpoint - a.breakpoint;
-        });
-        return;
-    }
-};
-
-const da = new DynamicAdapt("max");
-da.init();
-
-    /* $('.burger-btn').on('click', function () {
-    $('.burger-btn').toggleClass('burger-btn--active');
-    $('.burger-menu').toggleClass('burger-menu--active');
+	}
 });
 
-$('.burger-btn').on('click', function () {
-    $('.burger-btn').addClass('burger-btn--active');
-    $('.burger-menu').addClass('burger-menu--active');
+const swiperMobilSlider = new Swiper(".mobil-slider", {
+	slidesPerView: "1",
+	spaceBetween: 20,
+	speed: 500,
+	navigation: {
+		nextEl: ".mobil-slider-button-next",
+		prevEl: ".mobil-slider-button-prev",
+	},
 });
 
-$('.burger-menu__close-btn').on('click', function () {
-    $('.burger-btn').removeClass('burger-btn--active');
-    $('.burger-menu').removeClass('burger-menu--active');
+const swiperPageSlider = new Swiper(".page-slider", {
+	slidesPerView: "1",
+	spaceBetween: 50,
+	speed: 500,
+	pagination: {
+		el: ".page-slider-pagination",
+		type: "fraction",
+	},
+	navigation: {
+		nextEl: ".page-slider-next",
+		prevEl: ".page-slider-prev",
+	},
 });
 
-$('.header__menu-link').on('click', function () {
-    $('.burger-menu').removeClass('burger-menu--active');
-});  */
-
-    /* $('.open-video').magnificPopup({
-    type: 'iframe',
-    preloader: false,
+const swiperProductsSlider1 = new Swiper(".products-slider-1", {
+	speed: 500,
+	navigation: {
+		nextEl: ".products-slider-next-1",
+		prevEl: ".products-slider-prev-1",
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		576: {
+			slidesPerView: 4,
+			spaceBetween: 20,
+		},
+		993: {
+			slidesPerView: "4",
+			spaceBetween: 20,
+		},
+		1921: {
+			slidesPerView: 4,
+            spaceBetween: 30,
+            loop: true,
+		}
+	}
 });
 
-$('.popup-link').magnificPopup({
-    type: 'inline' // к попапу добавить класс mfp-hide // Через кнопку data-mfp-src="#call_me" добавить кнопке
+const swiperProductsSlider2 = new Swiper(".products-slider-2", {
+	slidesPerView: 1,
+	spaceBetween: 20,
+	speed: 500,
+	navigation: {
+		nextEl: ".products-slider-next-2",
+		prevEl: ".products-slider-prev-2",
+	},
+	breakpoints: {
+		576: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 4,
+			spaceBetween: 20,
+		},
+		1921: {
+			slidesPerView: 4,
+			spaceBetween: 30,
+		}
+	}
 });
 
-$('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-        enabled: true,
-        navigateByImgClick: true,
-        preload: [0, 1]
-    },
-    image: {
-        tError: '<a href="%url%">The image #%curr%</a> could not be loaded',
-    }
-}); */
-
-    /* $('.tab').on('click', function (e) {
-    e.preventDefault();
-
-    $($(this).siblings()).removeClass('tab--active');
-    $('.tabs-content').removeClass('tabs-content--active');
-
-    $(this).addClass('tab--active');
-    $($(this).attr('href')).addClass('tabs-content--active');
-
-    //$('.slider').slick('setPosition'); // Инициализация слайдера
-}); */
-
-    /* $('.accordion__item-summary').on('click', function () {
-    $(this).parent().siblings().removeClass('accordion__item--active');
-    $(this).parent().siblings().find('div.accordion__item-details').slideUp('300');
-    $(this).parent().toggleClass('accordion__item--active');
-    $(this).next().slideToggle('300');
-}); */
-
-    /* $('.slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: '<button class="slider__btn slider__btn--prev"></button>',
-    nextArrow: '<button class="slider__btn slider__btn--next"></button>',
-    dots: true,
-    //centerMode: true,
-    //centerPadding: '60px',
-    //variableWidth: true,
-    //autoplay: true,
-    //autoplaySpeed: 2000,
-    //fade: true,
-    //appendArrows: ,
-    //appendDots: ,
-    //rtl: true,
-    //mobileFirst: true,
-    //rows: 2,
-    //slidesPerRow: 1,
-    responsive: [
-        {
-            //breakpoint: ,
-            settings: {
-
-            }
-        },
-    ]
-});
-
-$(window).on('resize', function (e) {
-        // Переменная, по которой узнаем запущен слайдер или нет.
-        // Храним её в data
-        var init = $(".").data('init-slider');
-        // Если мобильный
-        if (window.innerWidth < 991) {
-            // Если слайдер не запущен
-            if (init != 1) {
-                // Запускаем слайдер и записываем в data init-slider = 1
-                $('.').slick({
-                    slidesToShow: 1,
-                    arrows: false,
-                    dots: true,
-                    variableWidth: true,
-                    responsive: [
-                        {
-                            breakpoint: 575,
-                            settings: {
-                                centerMode: true,
-                            },
-                        }
-                    ]
-                }).data({ 'init-slider': 1 });
-            }
-        }
-        // Если не мобайл
-        else {
-            // Если слайдер запущен
-            if (init == 1) {
-                // Разрушаем слайдер и записываем в data init-slider = 0
-                $('.').slick('unslick').data({ 'init-slider': 0 });
-            }
-        }
-    }).trigger('resize'); */
-
-    /* $("input[name=price_range]").ionRangeSlider({
-    type: "double",
-    grid: false,
-    //min: ,
-    //max: ,
-    //from: ,
-    //to: ,
-}); */
-
-    /* $.validator.addMethod("minlenghtphone", function (value, element) {
-    return value.replace(/\D+/g, '').length > 10;
-});
-$.validator.addMethod("requiredphone", function (value, element) {
-    return value.replace(/\D+/g, '').length > 1;
-});
-
-
-function validateForms(form) {
-    $(form).validate({
-        rules: {
-            name: "required",
-            phone: {
-                requiredphone: true,
-                minlenghtphone: true,
+const swiperGalleryNav = new Swiper(".gallery-nav", {
+	spaceBetween: 5,
+	slidesPerView: "auto",
+	freeMode: true,
+	//watchSlidesVisibility: true,
+	watchSlidesProgress: true,
+	navigation: {
+		nextEl: ".gallery-nav-next",
+		prevEl: ".gallery-nav-prev",
+	},
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+		},
+        1200: {
+            loop: true,
+            slidesPerView: 3,
+            direction: "vertical",
+            navigation: {
+                nextEl: ".gallery-nav-next",
+                prevEl: ".gallery-nav-prev",
             },
-            email: "required",
-            password: "required",
-            repeat_password: {
-                required: true,
-                equalTo: "#reg_pass",
-            }
-        },
-        submitHandler: function () {
-            $.magnificPopup.open({
-                items: {
-                    src: '#success',
-                }
-            });
-        },
-    });
-}
-
-validateForms('#order-popup form');
-validateForms('#product-card form');
-
-
-$('form').submit(function (e) {
-    e.preventDefault();
-
-    $.ajax({
-        type: "POST",
-        url: "send.php",
-        data: $(this).serialize(),
-    });
-    $('.form__input').removeClass('valid');
-    $(this).find("input").val("");
-    $('form').trigger('reset');
-    return false;
+            //spaceBetween: 12,
+		},
+	}
 });
 
-$.fn.setCursorPosition = function (pos) {
-    if ($(this).get(0).setSelectionRange) {
-        $(this).get(0).setSelectionRange(pos, pos);
-    } else if ($(this).get(0).createTextRange) {
-        var range = $(this).get(0).createTextRange();
-        range.collapse(true);
-        range.moveEnd('character', pos);
-        range.moveStart('character', pos);
-        range.select();
-    }
-};
+const swiperGallery = new Swiper(".project-gallery", {
+	spaceBetween: 20,
+	navigation: {
+		nextEl: ".gallery-next",
+		prevEl: ".gallery-prev",
+	},
+	thumbs: {
+		swiper: swiperGalleryNav,
+	},
+});
 
-$("input[name=phone]").click(function () {
-    $(this).setCursorPosition(4);
-}).mask("+7 (999) 999-99-99"); */
-
-    /* $("a[href^='#']").not('.tab').click(function () {
-    const href = $(this).attr("href");
-    $("html, body").animate({ scrollTop: $(href).offset().top + "px" });
-    return false;
+/* const productThumbsSlider = new Swiper(".product-card__gallery-nav", {
+    slidesPerView: "auto",
+    spaceBetween: 5,
+    direction: "horizontal",
+    navigation: {
+        nextEl: ".gallery-nav-next",
+        prevEl: ".gallery-nav-prev",
+    },
+    freeMode: true,
+	watchSlidesProgress: true,
+    breakpoints: {
+        768: {
+            //direction: "horizontal",
+            //slidesPerView: 3,
+            spaceBetween: 10,
+		},
+		1200: {
+            direction: "vertical",
+            slidesPerView: 3,
+            //spaceBetween: 12,
+		},
+	}
 }); */
+
+const productSlider = new Swiper(".product-card__slider", {
+    navigation: {
+        nextEl: ".gallery-next",
+        prevEl: ".gallery-prev",
+    },
+    thumbs: {
+        swiper: swiperGalleryNav,
+        //swiper: productThumbsSlider,
+    },
+    breakpoints: {
+        1200: {
+            loop: true,
+		},
+	}
+});
+
+const colorsSlider = new Swiper(".colors-slider", {
+    loop: true,
+	spaceBetween: 15,
+	navigation: {
+		nextEl: ".gallery-next",
+		prevEl: ".gallery-prev",
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        576: {
+            slidesPerView: 2,
+        },
+		768: {
+            slidesPerView: 3,
+        },
+	}
+});
+
+const metalSlider = new Swiper(".metal-slider", {
+    loop: true,
+    slidesPerView: 1,
+	navigation: {
+		nextEl: ".gallery-next",
+		prevEl: ".gallery-prev",
+	},
+});
+
+const viewedProducts = new Swiper(".viewed-products__slider", {
+	navigation: {
+		nextEl: ".product-button-next",
+		prevEl: ".product-button-prev",
+	},
+	slidesPerView: 4,
+	spaceBetween: 20,
+    speed: 500,
+    loop: true,
+	breakpoints: {
+        320: {
+            slidesPerView: "1",
+			spaceBetween: 20,
+        },
+        576: {
+            slidesPerView: 2,
+        },
+		768: {
+            slidesPerView: 3,
+			spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 4,
+        },
+		1921: {
+			spaceBetween: 30,
+		}
+	}
+});
 });
 
 

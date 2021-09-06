@@ -1,9 +1,15 @@
 .btn-black {
     display: block;
     text-align: center;
-    background-color: $textcolor;
+    background: $textcolor;
+    text-decoration: none;
     color: #fff;
+    border: none;
+    font-size: 14px;
     text-transform: uppercase;
+    font-weight: 300;
+    padding: 16px 14px;
+    //height: $btnh;
 
     &:hover,
     &:focus {
@@ -11,4 +17,102 @@
         text-decoration: none;
         color: #fff;
     }
+}
+
+.btn-border {
+    display: block;
+    padding: 15px;
+    border: 1px solid #fff;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        background: #fff;
+    }
+}
+
+.btn-border-dark {
+    display: block;
+    padding: 17.5px 15px;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &.arrow {
+        display: flex;
+        align-items: center;
+        padding: 14px 15px;
+
+        &::before {
+            content: '';
+            width: 22px;
+            height: 22px;
+            background: url(../img/icons/arrow-right-dark.svg) no-repeat center;
+            margin-right: 10px;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        background: #fff;
+    }
+}
+
+.more-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: #969696;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transform: translateY(-2px);
+
+    &:hover,
+    &:focus {
+        color: #969696;
+        text-decoration: underline;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../img/icons/arrow-right.svg) no-repeat center;
+        background-size: 100%;
+        margin-left: 6px;
+    }
+}
+
+.cart-link {
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    text-decoration: none;
+    background: url(../img/icons/shopping-cart.svg) no-repeat center;
+}
+
+.btn-search {
+    border: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    text-decoration: none;
+    background: url(../img/icons/search.svg) no-repeat center;
+}
+
+.btn-search.active {
+    background: url(../img/icons/close.svg) no-repeat center;
 }

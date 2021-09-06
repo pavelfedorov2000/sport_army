@@ -7,9 +7,7 @@
 <body>
 
     <div class="wrapper">
-        <!-- @@include('../../blocks/modules/header/_header.html')
-
-        @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html') -->
+        @@include('../../blocks/modules/header/_header.html')
 
         <main class="page catalog">
             <div class="container">
@@ -17,20 +15,48 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Главная</a></li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Скамейки
+                            workout
                         </li>
                     </ol>
                 </nav>
                 <h1 class="page-title">
-                    Скамейки
+                    workout
                 </h1>
 
                 <div class="catalog__top-filters top-filters flex flex-jcsb flex-aic">
                     <div class="top-filters__left">
-                        <div class="top-filters__buttons flex flex-wrap">
-                            @@include('../../blocks/modules/filters/_1.html')
-                            @@include('../../blocks/modules/filters/_2.html')
-                        </div>
+                        <form action="#">
+                            <div class="top-filters__buttons flex flex-wrap">
+                                <div class="top-filters__btn">
+                                    <div class="top-filters__btn-inner">
+                                        Workout
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 9L12.5 15L18.5 9" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    @@include('../../blocks/modules/filters/_1.html')
+                                </div>
+                                <div class="top-filters__btn">
+                                    <div class="top-filters__btn-inner">
+                                        Фильтр
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 9L12.5 15L18.5 9" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    @@include('../../blocks/modules/filters/_2.html')
+                                </div>
+                            </div>
+                            <div class="top-filters__checked flex flex-aic">
+                                <div class="top-filters__checked-items flex flex-wrap"></div>
+                                <button class="top-filters__reset-btn" type="reset">
+                                    Cбросить фильтр
+                                </button>
+                            </div>
+                        </form>
                     </div>
                     <div class="top-filters__right">
                         <form class="show-form flex flex-aic" action="#">
@@ -56,18 +82,10 @@
                                 <label class="show-form__radio-item">
                                     <input class="radio-box" type="radio" name="show" value="all">
                                     <span class="radio-style">Все</span>
-
                                 </label>
                             </div>
                         </form>
                     </div>
-                </div>
-
-                <div class="top-filters__checked flex flex-aic">
-                    <div class="top-filters__checked-items flex flex-wrap"></div>
-                    <button class="top-filters__reset-btn">
-                        Cбросить фильтр
-                    </button>
                 </div>
 
                 <div class="catalog__cards grid col-4">
@@ -288,9 +306,7 @@
             </div>
         </main>
 
-        <!-- @@include('../../blocks/modules/footer/_footer.html')
-
-        @@include('../../blocks/modules/popups/_popups.html') -->
+        @@include('../../blocks/modules/footer/_footer.html')
     </div>
 
     @@include('../_js.html')

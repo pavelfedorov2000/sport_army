@@ -1,16 +1,4 @@
-// ============== COMMON ============= //
-//@import 'modules/header/header';
-//@import 'modules/burger/burger';
-//@import 'modules/footer/footer';
 @import 'modules/popups/popups';
-
-// ============= HOME-PAGE ============== //
-/* @import 'modules/promo/promo';
-@import 'modules/benefits/benefits';
-@import 'modules/services/services';
-@import 'modules/reviews/reviews';
-@import 'modules/prices/prices'; */
-
 @import './modules/colors/colors.scss';
 @import './modules/metal/metal.scss';
 
@@ -18,10 +6,12 @@
 @import 'modules/catalog/catalog';
 @import 'modules/filters/filters';
 
+// ============= CONTACTS ============== //
 @import './modules/contacts/contacts.scss';
 
 @import 'modules/basket/basket';
-/* @import 'modules/aside-filters/aside-filters'; */
+
 
 // ============= PRODUCT-CARD-PAGE ============== //
 @import 'modules/product-card/product-card';
+@import 'modules/viewed-products/viewed-products';

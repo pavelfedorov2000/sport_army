@@ -38,6 +38,7 @@
         "not dead"
     ],
     "dependencies": {
+        "@fancyapps/fancybox": "^3.5.7",
         "animate.css": "^4.1.0",
         "gulp-htmlmin": "^5.0.1"
     }

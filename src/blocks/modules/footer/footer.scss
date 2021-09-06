@@ -1,7 +1,7 @@
 .footer {
     margin-top: 50px;
     padding-top: 75px;
-    background: #19202A;
+    background: $textcolor;
     color: #fff;
     font-size: 18px;
 
@@ -43,18 +43,18 @@
 
     &__email {
         padding: 1px 0 1px 34px;
-        background: url(../images/dist/icon/mail.svg) no-repeat left
+        background: url(../img/icons/mail.svg) no-repeat left
     }
 
     .adres {
         padding-left: 34px;
-        background: url(../images/dist/icon/map-pin.svg) no-repeat 0 5px
+        background: url(../img/icons/map-pin.svg) no-repeat 0 5px
     }
 
     .time {
         margin-top: 25px;
         padding-left: 34px;
-        background: url(../images/dist/icon/bx_bx-time-five.svg) no-repeat 0 5px;
+        background: url(../img/icons/bx_bx-time-five.svg) no-repeat 0 5px;
 
         b {
             font-size: 18px;

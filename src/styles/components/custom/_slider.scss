@@ -1,0 +1,50 @@
+.swiper-nav_castom {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    justify-content: flex-end;
+    width: 110px;
+    background: #fff;
+}
+
+.swiper-nav_castom>* {
+    position: initial;
+    width: auto;
+    font-size: 18px;
+    color: #595959;
+}
+
+.swiper-nav_castom .swiper-pagination_castom {
+    padding: 0 5px;
+    letter-spacing: -0.1em;
+}
+
+.swiper-nav_castom .swiper-pagination-current {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+}
+
+.swiper-arrows {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.swiper-arrows_prev {
+    background: url(../img/icons/arrow-left.svg) no-repeat center;
+}
+
+.swiper-arrows_next {
+    background: url(../img/icons/arrow-right.svg) no-repeat center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

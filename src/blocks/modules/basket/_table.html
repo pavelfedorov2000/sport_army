@@ -1,15 +1,9 @@
 <div class="basket-table">
-    <div class="basket-table__header flex flex-jcsb">
-
-
-
-
-    </div>
     <div class="basket-table__body">
         <div class="basket-table__row flex flex-jcsb">
             <div class="basket-table__col flex flex-col flex-aic">
                 <div class="basket-table__col-title">товар</div>
-                <div class="basket-table__content basket-table__product flex flex-jcsb">
+                <div class="basket-table__content basket-table__product flex">
                     <div>
                         <div class="basket-table__product-img">
                             <img src="img/basket/1.jpg" alt="">
@@ -70,7 +64,7 @@
             </div>
         </div>
         <div class="basket-table__row flex flex-jcsb">
-            <div class="basket-table__product flex flex-jcsb">
+            <div class="basket-table__col basket-table__product flex">
                 <div>
                     <div class="basket-table__product-img">
                         <img src="img/basket/2.jpg" alt="">
@@ -103,13 +97,17 @@
                     </div>
                 </div>
             </div>
-            <div class="basket-table__price">16 110 РУБ</div>
-            <div class="counter basket-table__quantity flex flex-jcsb flex-aic">
-                <button class="count-btn minus-btn" type="button"></button>
-                <input class="counter-input" value="1" name="product_quantity">
-                <button class="count-btn plus-btn" type="button"></button>
+            <div class="basket-table__col basket-table__price">16 110 РУБ</div>
+            <div class="basket-table__col">
+                <div class="counter basket-table__quantity flex flex-jcsb flex-aic">
+                    <button class="count-btn minus-btn" type="button"></button>
+                    <input class="counter-input" value="1" name="product_quantity">
+                    <button class="count-btn plus-btn" type="button"></button>
+                </div>
             </div>
-            <div class="basket-table__sum">16 110 РУБ</div>
+            <div class="basket-table__col">
+                <div class="basket-table__sum">16 110 РУБ</div>
+            </div>
             <button class="basket-table__delete-btn">
                 <svg>
                     <use xlink:href="img/sprite.svg#delete"></use>

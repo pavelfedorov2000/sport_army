@@ -16,9 +16,10 @@ body {
     padding: 0;
     overflow-x: hidden;
     min-width: 320px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: $userfont;
+    font-size: $fontsize;
+    line-height: $lineheight;
+    color: $textcolor;
     color: $textcolor;
 }
 

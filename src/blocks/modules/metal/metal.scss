@@ -9,6 +9,14 @@
         padding: 123px 0 72px;
     }
 
+    @media(max-width: 992px) {
+        padding: 50px 0 0 0;
+    }
+
+    @media(max-width: 576px) {
+        padding-top: 0px;
+    }
+
     &__top {
         max-width: 1156px;
         margin-bottom: 40px;
@@ -24,6 +32,22 @@
             margin-top: 20px;
         }
     }
+
+    &__cards {
+        grid-gap: 20px;
+
+        @media only screen and (min-width: 1921px) {
+            grid-gap: 30px;
+        }
+
+        @media(max-width: 1200px) {
+            grid-gap: 15px;
+        }
+
+        @media(max-width: 767px) {
+            display: none;
+        }
+    }
 }
 
 .metal-card {
@@ -31,9 +55,34 @@
 
     @media only screen and (min-width: 1921px) {
         height: 370px;
+        padding-top: 60px;
     }
 
     @media(max-width: 1440px) {
         height: 200px;
+        padding-top: 20px;
+    }
+
+    @media(max-width: 1200px) {
+        height: 190px;
+        padding-top: 35px;
+    }
+
+    @media(max-width: 576px) {
+        height: 160px;
+        padding-top: 30px;
+    }
+
+    &__title {
+        @media(max-width: 1500px) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}
+
+.metal-slider {
+    @media(max-width: 767px) {
+        margin-bottom: 0 !important;
     }
 }

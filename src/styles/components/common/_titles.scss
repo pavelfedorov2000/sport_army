@@ -1,8 +1,27 @@
-.title {
+.page-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
 .section-title {
-}
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 45px;
 
-.page-title {
+    &::after {
+        content: '';
+        display: block;
+        flex-grow: 1;
+        margin-left: 20px;
+        height: 1px;
+        background: #E5E5E5;
+        margin-top: 9px;
+    }
 }

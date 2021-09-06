@@ -1,34 +1,64 @@
-/* .popup {
-    position: relative;
-    max-width: 600px;
-    margin: 0 auto;
+.overlay {
+    @media(max-width: 576px) {
+        overflow: auto;
+    }
+}
 
-    &__title {}
+.popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
 
-    &__subtitle {}
+.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 201;
+    background-color: transparent;
 
-    &__form {}
+    @media only screen and (min-width: 1921px) {
+        top: 50px;
+        right: 70px;
+    }
 
-    &__form-input {}
+    @media(max-width: 1500px) {
+        top: 30px;
+        right: 37px;
+    }
 
-    &__form-btn {}
-} */
+    @media(max-width: 576px) {
+        top: 10px;
+        right: 20px;
+    }
+}
 
-.fancybox-close-small {
-    background: #fff;
+/* .fancybox-close-small {
+    background: transparent;
     opacity: 1;
 
     &:before {
         content: '';
         position: absolute;
         @extend %pos-center-xy;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         background-image: url(../img/icons/popup-close.svg);
-    }
-}
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
 
-.fancybox-slide--html .fancybox-close-small {
+        @media(max-width: 576px) {
+            width: 18px;
+            height: 18px;
+        }
+    }
+} */
+
+/* .fancybox-slide--html .fancybox-close-small {
     top: 20px;
     right: 20px;
     padding: 0;
@@ -42,7 +72,50 @@
         top: 30px;
         right: 37px;
     }
+
+    @media(max-width: 576px) {
+        top: 30px;
+        right: 22px;
+    }
+}
+
+.fancybox-button {
+    width: 40px;
+    height: 40px;
+
+    @media(max-width: 576px) {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.fancybox-slide--html {
+    @media(max-width: 768px) {
+        padding: 0;
+    }
+}
+
+.fancybox-slide {
+    @media(max-width: 576px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+} */
+
+.fancybox {
+    &__content {
+        width: 100%;
+        height: 70%;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+    }
 }
 
 @import './feedback/feedback';
 @import './colors/colors';
+@import './order-success/order-success';
+@import './feedback-success/feedback-success';

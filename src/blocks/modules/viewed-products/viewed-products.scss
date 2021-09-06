@@ -1,0 +1,126 @@
+.viewed-products {
+    padding: 50px 0 40px;
+
+    @media only screen and (min-width: 1921px) {
+        padding: 150px 0;
+    }
+
+    @media(max-width: 1500px) {
+        padding: 100px 0;
+    }
+
+    @media(max-width: 767px) {
+        padding: 70px 0;
+    }
+
+    @media(max-width: 576px) {
+        padding: 60px 0 10px;
+    }
+
+    &__slider {
+        padding-bottom: 10px;
+    }
+
+    .swiper-nav_castom {
+        margin-bottom: -29px;
+        transform: translateY(-69px);
+
+        @media only screen and (min-width: 1921px) {
+            margin-bottom: -58px;
+            transform: translateY(-101px);
+        }
+
+        @media(max-width: 1500px) {
+            margin-bottom: -24px;
+            transform: translateY(-61px);
+        }
+
+        @media(max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .catalog-card {
+        min-height: 471px;
+
+        @media only screen and (min-width: 1921px) {
+            min-height: 587px;
+        }
+
+        @media(max-width: 1500px) {
+            min-height: 448px;
+        }
+
+        @media(max-width: 992px) {
+            min-height: 328px;
+        }
+
+        @media(max-width: 767px) {
+            min-height: 382px;
+        }
+
+
+        &__content {
+            //min-height: 198px;
+
+            @media only screen and (min-width: 1921px) {
+                //min-height: 174px;
+                padding-bottom: 20px;
+            }
+
+            @media(max-width: 1500px) {
+                //min-height: 175px;
+                padding: 20px 8px 30px;
+            }
+
+            @media(max-width: 992px) {
+                background-color: #fff;
+                //box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+                //min-height: 328px - 200px;
+                padding: 10px 10px 20px;
+            }
+        }
+
+        &__price {
+            //ont-size: 24px;
+            //ine-height: 29px;
+            font-size: 18px;
+            line-height: 22px;
+
+            @media only screen and (min-width: 1921px) {
+                font-size: 24px;
+                line-height: 29px;
+                //font-size: 30px;
+                //line-height: 37px;
+            }
+
+            /*  @media(max-width: 992px) {
+                font-size: 18px;
+                line-height: 22px;
+            } */
+        }
+    }
+}
+
+.seo-text {
+    max-width: 1050px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+
+    @media only screen and (min-width: 1921px) {
+        max-width: 1575px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    @media(max-width: 1500px) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media(max-width: 767px) {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

@@ -5,11 +5,11 @@
     &__btn+&__btn {
         margin-left: 30px;
 
-        @media(max-width: 1440px) {
+        @media(max-width: 1500px) {
             margin-left: 20px;
         }
 
-        @media(max-width: 500px) {
+        @media(max-width: 576px) {
             margin-left: 0;
             margin-top: 10px;
         }
@@ -27,7 +27,7 @@
             height: 64px;
         }
 
-        @media(max-width: 1440px) {
+        @media(max-width: 1500px) {
             height: 54px;
         }
 
@@ -36,13 +36,28 @@
             height: 44px;
         }
 
-        @media(max-width: 500px) {
+        @media(max-width: 576px) {
             width: 100%;
         }
 
         &--active {
             svg {
                 transform: rotate(-180deg);
+            }
+        }
+
+        &--disabled {
+            cursor: initial;
+            background-color: rgba($textcolor, .5);
+
+            .top-filters__btn-inner {
+                color: rgba(255, 255, 255, 0.5);
+
+                svg {
+                    path {
+                        stroke: rgba(255, 255, 255, 0.5);
+                    }
+                }
             }
         }
 
@@ -55,7 +70,7 @@
                     width: 375px;
                 }
 
-                @media(max-width: 500px) {
+                @media(max-width: 576px) {
                     width: 100%;
                 }
 
@@ -72,7 +87,7 @@
                 padding-left: 45px;
                 padding-right: 45px;
 
-                @media(max-width: 1440px) {
+                @media(max-width: 1500px) {
                     width: 840px;
                 }
 
@@ -83,7 +98,7 @@
                     left: -207px;
                 }
 
-                @media(max-width: 500px) {
+                @media(max-width: 576px) {
                     left: 0;
                     width: 100%;
                 }
@@ -92,11 +107,11 @@
                     font-weight: 700;
                     margin-bottom: 30px;
 
-                    @media(max-width: 1440px) {
+                    @media(max-width: 1500px) {
                         margin-bottom: 33px;
                     }
 
-                    @media(max-width: 500px) {
+                    @media(max-width: 576px) {
                         margin-bottom: 20px;
                     }
                 }
@@ -139,9 +154,15 @@
     }
 
     &__checked {
+        margin-top: 30px;
+
+        @media only screen and (min-width: 1921px) {
+            margin-top: 40px;
+        }
+
         @media(max-width: 992px) {
             display: block;
-            margin-top: -20px;
+            //margin-top: -20px;
         }
     }
 
@@ -159,10 +180,14 @@
         &:last-child {
             margin-right: 30px;
 
-            @media(max-width: 1440px) {
+            @media(max-width: 1500px) {
                 margin-right: 20px;
             }
         }
+    }
+
+    &__left {
+        margin-bottom: -10px;
     }
 
     &__checked-item {
@@ -200,7 +225,7 @@
             line-height: 22px;
         }
 
-        @media(max-width: 1440px) {
+        @media(max-width: 1500px) {
             font-size: 14px;
             line-height: 17px;
         }
@@ -232,7 +257,7 @@
         padding-top: 30px;
         padding-bottom: 60px;
 
-        @media(max-width: 500px) {
+        @media(max-width: 576px) {
             padding-top: 30px;
             padding-bottom: 40px;
             min-height: auto;
@@ -244,18 +269,18 @@
             margin-right: 45.5px;
             margin-left: auto;
 
-            @media(max-width: 1440px) {
+            @media(max-width: 1500px) {
                 margin-right: auto;
             }
         }
 
-        @media(max-width: 500px) {
+        @media(max-width: 576px) {
             width: 100%;
         }
     }
 
     &__col+&__col {
-        @media(max-width: 500px) {
+        @media(max-width: 576px) {
             margin-top: 40px;
         }
     }
@@ -340,8 +365,9 @@
         margin-bottom: 0;
         margin-top: auto;
         align-self: flex-start;
+        margin-top: 20px;
 
-        @media(max-width: 500px) {
+        @media(max-width: 576px) {
             margin-top: 25px;
         }
 

@@ -11,13 +11,22 @@
 
     @media(max-width: 1500px) {
         width: 670px;
-        padding: 70px 40px;
+        padding: 70px 40px 70px 30px;
     }
 
-    @media(max-width: 1200px) {
-        padding-left: 30px;
-        padding-right: 30px;
+    @media(max-width: 767px) {
+        width: 100%;
     }
+
+    @media(max-width: 576px) {
+        padding: 60px 20px 40px;
+        overflow: auto;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+
+
 
     // .feedback-form__title
 
@@ -31,6 +40,10 @@
             line-height: 41px;
             margin-bottom: 40px;
         }
+
+        @media(max-width: 576px) {
+            margin-bottom: 20px;
+        }
     }
 
     // .feedback-form__item
@@ -38,18 +51,6 @@
     &__item+&__item {
         margin-top: 20px;
     }
-
-    // .feedback-form__input
-
-    &__input {}
-
-    // .feedback-form__item--textarea
-
-    &__item--textarea {}
-
-    // .feedback-form__textarea
-
-    &__textarea {}
 
     // .feedback-form__agreement
 
@@ -67,6 +68,15 @@
             font-size: 18px;
             line-height: 26px;
             padding-left: 25px;
+
+            @media(max-width: 767px) {
+                font-size: 16px;
+            }
+
+            @media(max-width: 576px) {
+                font-size: 12px;
+                line-height: 10px;
+            }
         }
 
         .check-box:checked+.check-style:before {
@@ -75,8 +85,4 @@
             background-image: url(../img/icons/agree-check.svg);
         }
     }
-
-    // .feedback-form__btn
-
-    &__btn {}
 }

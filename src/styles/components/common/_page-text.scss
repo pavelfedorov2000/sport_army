@@ -1,0 +1,129 @@
+.page-text {
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 50px;
+}
+
+.page-text h2 {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 35px;
+}
+
+.page-text-center {
+    text-align: center;
+    //max-width: 990px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.page-text-center p {
+    line-height: 1.44;
+}
+
+.page-text__img {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+}
+
+.page-text-wrap {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.page-text-wrap::before {
+    content: '';
+    display: block;
+    width: 660px;
+    top: 60px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    background: #efefef;
+    position: absolute;
+}
+
+.page-text-row {
+    position: relative;
+    z-index: 2;
+    padding: 0 0 40px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.page-text-row .col__7 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 39%;
+    flex: 1 0 39%;
+    width: 39%;
+    padding-right: 0;
+}
+
+.page-text-row .col__8 {
+    flex: 1 0 44%;
+    width: 44%;
+    padding-right: 100px;
+    //padding-left: 90px;
+}
+
+.page-text-row .col__10 {
+    flex: 1 0 56%;
+    width: 56%;
+    //padding-right: 105px;
+}
+
+.page-text-row .col__11 {
+    flex: 1 0 61%;
+    width: 61%;
+    padding-left: 80px;
+    //padding-right: 90px;
+}
+
+.page-text-row:last-child {
+    margin-bottom: 0;
+}
+
+.page-text-row__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.page-text-row_revers {
+    flex-direction: row-reverse;
+}
+
+.page-text-row_revers .col__8 {
+    padding-left: 100px;
+    //padding-right: 90px;
+}
+
+.page-text-row_revers .col__10 {
+    //padding-right: 15px;
+    //padding-left: 105px;
+}
+
+.page-text-row_revers .page-text-row__text {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.page-text-row_decor {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.page-text-row_decor::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 34%;
+    background: #19202a;
+    left: 0;
+    bottom: 0;
+}

@@ -7,17 +7,201 @@
 <body>
 
     <div class="wrapper">
+
         @@include('../../blocks/modules/header/_header.html')
 
-        @@include('../../blocks/modules/burger/burger-menu/_burger-menu.html')
+        @@include('../../blocks/modules/banner-slider/_banner-slider.html')
 
-        <main class="page">
-            @@include('../../blocks/modules/promo/_promo.html')
-        </main>
+        <div class="recommendations recommendations_home">
+            <div class="container">
+                <h2 class="section-title">РЕКОМЕНДУЕМЫЕ ТОВАРЫ</h2>
+
+                <div class="product-carusel-nav swiper-nav_castom">
+                    <div class="product-button-prev swiper-arrows swiper-arrows_prev"></div>
+                    <div class="product-pagination swiper-pagination_castom"></div>
+                    <div class="product-button-next swiper-arrows swiper-arrows_next"></div>
+                </div>
+            </div>
+            <div class="product-carusel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product-item">
+                            <div class="product-item__img"><img src="img/content/car1.jpg" alt=""></div>
+                            <a href="#" class="product-item__content">
+                                <span class="product-item__title">Стол "Кантри"</span>
+                                <span href="#" class="product-item__link btn-border">ЧИТАТЬ ДАЛЕЕ</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-item">
+                            <div class="product-item__img"><img src="img/content/car2.jpg" alt=""></div>
+                            <a href="#" class="product-item__content">
+                                <span class="product-item__title">Шезлонг "Кантри"</span>
+                                <span class="product-item__link btn-border">ЧИТАТЬ ДАЛЕЕ</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-item">
+                            <div class="product-item__img"><img src="img/content/car3.jpg" alt=""></div>
+                            <a href="#" class="product-item__content">
+                                <span class="product-item__title">Шезлонг "Кантри"</span>
+                                <span class="product-item__link btn-border">ЧИТАТЬ ДАЛЕЕ</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-item">
+                            <div class="product-item__img"><img src="img/content/car4.jpg" alt=""></div>
+                            <a href="#" class="product-item__content">
+                                <span class="product-item__title">Шезлонг "Кантри"</span>
+                                <span class="product-item__link btn-border">ЧИТАТЬ ДАЛЕЕ</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-item">
+                            <div class="product-item__img"><img src="img/content/car1.jpg" alt=""></div>
+                            <a href="#" class="product-item__content">
+                                <span class="product-item__title">Шезлонг "Кантри"</span>
+                                <span class="product-item__link btn-border">ЧИТАТЬ ДАЛЕЕ</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="projects projects_home">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title">Проекты</h2>
+                    <a href="#" class="more-link">Смотреть все проекты</a>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <div class="swiper-slide projects-item projects-item_9 projects-item_col_1">
+                    <div class="projects-item__img"><img src="img/content/p1.jpg" alt=""></div>
+                    <a href="#" class="projects-item__text">Уличная мебель и спортоборудование для Коттеджного поселка
+                        Берёзки</a>
+                </div>
+                <div class="swiper-slide projects-item projects-item_6 projects-item_col_2">
+                    <div class="projects-item__img"><img src="img/content/p2.jpg" alt=""></div>
+                    <a href="#" class="projects-item__text">Благоустройство парка в г. Навашино</a>
+                </div>
+                <div class="swiper-slide projects-item projects-item_9 projects-item_col_3">
+                    <div class="projects-item__img"><img src="img/content/p3.jpg" alt=""></div>
+                    <a href="#" class="projects-item__text">Воркаут комплексы для ЛОК Витязь, с. Витязево, г.Анапа</a>
+                </div>
+                <div class="swiper-slide projects-item projects-item_5 projects-item_col_4">
+                    <div class="projects-item__img"><img src="img/content/p4.jpg" alt=""></div>
+                    <a href="#" class="projects-item__text">Благоустройство г. Самара этап 2</a>
+                </div>
+                <div class="swiper-slide projects-item projects-item_6 projects-item_col_1">
+                    <div class="projects-item__img"><img src="img/content/p5.jpg" alt=""></div>
+                    <a href="#" class="projects-item__text">Благоустройство территории автовокзала Щёлковский
+                        г.Москва</a>
+                </div>
+                <div class="swiper-slide projects-item projects-item_9 projects-item_col_2">
+                    <div class="projects-item__img"><img src="img/content/p6.jpg" alt=""></div>
+                    <a href="#" class="projects-item__text">Вазоны и настилы для БЦ Семёновский г. Москва</a>
+                </div>
+                <div class="swiper-slide projects-item projects-item_6 projects-item_col_3">
+                    <div class="projects-item__img"><img src="img/content/p7.jpg" alt=""></div>
+                    <a href="#" class="projects-item__text">Игровой комплекс Башня для ЛОК Витязь, с. Витязево, г.
+                        Анапа</a>
+                </div>
+                <div class="swiper-slide projects-item projects-item_5 projects-item_col_4">
+                    <div class="projects-item__img"><img src="img/content/p8.jpg" alt=""></div>
+                    <a href="#" class="projects-item__text">МАФы для городского парка г. Отрадный</a>
+                </div>
+                <div class="swiper-slide projects-item projects-item_5 projects-item_col_4">
+                    <div class="projects-item__img"><img src="img/content/p9.jpg" alt=""></div>
+                    <a href="#" class="projects-item__text">Благоустройство территории жилого дома Революция г.
+                        Новосибирск, ул.
+                        Ленинградская, д. 322</a>
+                </div>
+            </div>
+            <div class="mobil-slider">
+                <div class="mobil-slider__nav">
+                    <div class="mobil-slider-button-prev mobil-slider__prev"></div>
+                    <div class="mobil-slider-button-next mobil-slider__next"></div>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="projects-item projects-item_9 projects-item_col_1">
+                            <div class="projects-item__img"><img src="img/content/p1.jpg" alt=""></div>
+                            <a href="#" class="projects-item__text">Уличная мебель и спортоборудование для Коттеджного
+                                поселка
+                                Берёзки</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="projects-item projects-item_6 projects-item_col_2">
+                            <div class="projects-item__img"><img src="img/content/p2.jpg" alt=""></div>
+                            <a href="#" class="projects-item__text">Благоустройство парка в г. Навашино</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="projects-item projects-item_9 projects-item_col_3">
+                            <div class="projects-item__img"><img src="img/content/p3.jpg" alt=""></div>
+                            <a href="#" class="projects-item__text">Воркаут комплексы для ЛОК Витязь, с. Витязево,
+                                г.Анапа</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="projects-item projects-item_5 projects-item_col_4">
+                            <div class="projects-item__img"><img src="img/content/p4.jpg" alt=""></div>
+                            <a href="#" class="projects-item__text">Благоустройство г. Самара этап 2</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="projects-item projects-item_6 projects-item_col_1">
+                            <div class="projects-item__img"><img src="img/content/p5.jpg" alt=""></div>
+                            <a href="#" class="projects-item__text">Благоустройство территории автовокзала Щёлковский
+                                г.Москва</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="projects-item projects-item_9 projects-item_col_2">
+                            <div class="projects-item__img"><img src="img/content/p6.jpg" alt=""></div>
+                            <a href="#" class="projects-item__text">Вазоны и настилы для БЦ Семёновский г. Москва</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="projects-item projects-item_6 projects-item_col_3">
+                            <div class="projects-item__img"><img src="img/content/p7.jpg" alt=""></div>
+                            <a href="#" class="projects-item__text">Игровой комплекс Башня для ЛОК Витязь, с. Витязево,
+                                г.
+                                Анапа</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="projects-item projects-item_5 projects-item_col_4">
+                            <div class="projects-item__img"><img src="img/content/p8.jpg" alt=""></div>
+                            <a href="#" class="projects-item__text">МАФы для городского парка г. Отрадный</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="projects-item projects-item_5 projects-item_col_4">
+                            <div class="projects-item__img"><img src="img/content/p9.jpg" alt=""></div>
+                            <a href="#" class="projects-item__text">Благоустройство территории жилого дома Революция г.
+                                Новосибирск, ул. Ленинградская, д. 322</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('../../blocks/modules/about/_about.html')
 
         @@include('../../blocks/modules/footer/_footer.html')
-
-        @@include('../../blocks/modules/popups/_popups.html')
     </div>
 
     @@include('../_js.html')
